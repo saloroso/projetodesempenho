@@ -47,7 +47,7 @@
 
   <!-- Sign in button -->
   
-  <button class="btn btn-dark btn-block my-4" type="submit">Logar</button>
+  <button class="btn btn-dark btn-block my-4" type="submit" onclick="logarAdm()">Logar</button>
 
   <!-- Register -->
   <p>Não possui uma conta?
@@ -79,8 +79,10 @@
     var senhaadm = document.getElementById("defaultLoginFormPassword").value;
     var texto = emailadm + senhaadm;
       
+    function logarAdm(){                                                 
     alert ("Texto string" + texto);    
-    
+    }
+                         
   </script>
 </body>
 
