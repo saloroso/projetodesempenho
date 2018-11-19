@@ -75,12 +75,11 @@
   <!-- Script Próprio -->
   <script type="text/javascript">
   
-    var emailadm = document.getElementById("defaultLoginFormEmail").value;
+    var emailadm = document.getElementById("defaultLoginFormEmail");
     var senhaadm = document.getElementById("defaultLoginFormPassword").value;
-    var texto = emailadm + senhaadm;
       
     function logarAdm(){                                                 
-    alert ("Texto string" + texto);    
+    alert (senhaadm.value, senhaadm, emailadm);    
     }
                          
   </script>
