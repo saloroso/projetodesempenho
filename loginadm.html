@@ -46,6 +46,7 @@
   </div>
 
   <!-- Sign in button -->
+  
   <button class="btn btn-dark btn-block my-4" type="submit">Logar</button>
 
   <!-- Register -->
@@ -70,6 +71,17 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
+  
+  <!-- Script Próprio -->
+  <script type="text/javascript">
+  
+    var emailadm = document.getElementById("defaultLoginFormEmail").value;
+    var senhaadm = document.getElementById("defaultLoginFormPassword").value;
+    var texto = emailadm + senhaadm;
+      
+    alert ("Texto string" + texto);    
+    
+  </script>
 </body>
 
 </html>
