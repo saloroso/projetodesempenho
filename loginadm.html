@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Avaliação de Desempenho</title>
+  <title>Avaliação de Desempenho 1.0</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
@@ -47,7 +47,9 @@
 
   <!-- Sign in button -->
   
-  <button class="btn btn-dark btn-block my-4" type="submit" onclick="logarAdm(emailadm, senhaadm)">Logar</button>
+  
+  
+  <button class="btn btn-dark btn-block my-4" type="submit" onclick="logarAdm()">Logar</button>
 
   <!-- Register -->
   <p>Não possui uma conta?
@@ -74,12 +76,14 @@
   
   <!-- Script Próprio -->
   <script type="text/javascript">
-  
-    var emailadm = document.getElementById("defaultLoginFormEmail").placeholder;
-    var senhaadm = document.getElementById("defaultLoginFormPassword").value;
+     
+    function logarAdm(){   
       
-    function logarAdm(emailadm, senhaadm){                                                 
-    alert (senhaadm.value, senhaadm, emailadm);    
+        var emailadm = document.getElementById("defaultLoginFormEmail").placeholder;
+        var senhaadm = document.getElementById("defaultLoginFormPassword").value;
+      
+        alert ("senhaadm", emailadm);    
+        document.writeln(senhaadm, emailadm);
     }
                          
   </script>
