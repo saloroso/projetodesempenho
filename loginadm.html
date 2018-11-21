@@ -10,18 +10,6 @@
   <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet"> <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
-  <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
-    listadeadms = new Array(); // Global da própria página.
-    function Pegarlistadeadms(){
-          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
-          listadeadms_temp = JSON.parse(listadeadms_temp); 
-          if (listadeadms_temp == null){ 
-          listadeadms_temp = new Array();
-          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso.")}
-  window.onload = Pegarlistadeadms();
-  </script>
 </head> <!-- FIM DO HEAD -->
 
 <body>
@@ -67,7 +55,7 @@
           </div>
       </div>
   </div>
-  <button class="btn btn-dark btn-block my-4" type="reset" onclick="teste()">LOGAR</button>
+  <button class="btn btn-dark btn-block my-4" type="reset" onclick="Darlan22()">LOGAR</button>
   <p>Não possui uma conta?
       <a href="https://saloroso.github.io/projetodesempenho/novoadm">Cadastre-se</a>
   </p>
