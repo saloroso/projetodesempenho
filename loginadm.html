@@ -13,7 +13,7 @@
  
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     
-    alert ("Carregando automaticamente 11."); 
+    alert ("Carregando automaticamente 12."); 
     
     listadeadms = new Array(); // Global da própria página.
  
@@ -27,6 +27,8 @@
           alert ("Banco de adms não existia, então foi criado.");
           listadeadms_temp.push(1);
           listadeadms_temp.push("Io");
+          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));
+             alert ("Carregando banco.");             
           } else {
            alert ("Banco de adms já existia, foi apenas recuperado.");
           }
