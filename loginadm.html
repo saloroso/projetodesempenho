@@ -18,9 +18,9 @@
           if (listadeadms_temp == null){ 
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          listadeadms = listadeadms_temp;}
+          listadeadms = listadeadms_temp;
+        alert ("Load_session automáticos realizados com sucesso.")}
   window.onload = Pegarlistadeadms();
-    alert ("Load automático realizado com sucesso.")
   </script>
 </head> <!-- FIM DO HEAD -->
 
