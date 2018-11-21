@@ -12,34 +12,19 @@
   <link href="css/style.css" rel="stylesheet">
  
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
-        
     listadeadms = new Array(); // Global da própria página.
- 
     function Pegarlistadeadms(){
-      
-          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS"); // Recupera os dados armazenados conforme a chave.
-          listadeadms_temp = JSON.parse(listadeadms_temp); // Converte string para um objeto.
-      
-           if (listadeadms_temp == null){ // Caso não haja conteúdo, se for a primeira vez que a pessoa acessa.
+          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
+          listadeadms_temp = JSON.parse(listadeadms_temp); 
+          if (listadeadms_temp == null){ 
           listadeadms_temp = new Array();
-          alert ("Banco de adms não existia, então foi criado.");
-          listadeadms_temp.push(1);
-          listadeadms_temp.push("Io");
-          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));
-             alert ("Carregando banco.");             
-          } else {
-           alert ("Banco de adms já existia, foi apenas recuperado.");
-          }
-          listadeadms = listadeadms_temp;
-    }
-    
+          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
+          listadeadms = listadeadms_temp;}
   window.onload = Pegarlistadeadms();
   </script>
-  
 </head> <!-- FIM DO HEAD -->
 
 <body>
-
    <!--Main Navigation-->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
@@ -70,30 +55,16 @@
   </header>
   <!--Main Navigation-->
   
-  <!-- Start your project here-->
-  <!--Main Navigation-->
-  <!-- Default form login -->
 <form class="text-center border border-light p-5">
-
   <p class="h4 mb-4">ACESSO A ÁREA DO LÍDER</p>
-
-  <!-- Email -->
   <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-  <!-- Password -->
   <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Senha">
-
   <div class="d-flex justify-content-around">
       <div>
-          <!-- Remember me -->
           <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
               <label class="custom-control-label" for="defaultLoginFormRemember">Lembre-me</label>
           </div>
-      </div>
-      <div>
-          <!-- Forgot password -->
-          <a href="https://saloroso.github.io/projetodesempenho/">Voltar a Página Inicial</a>
       </div>
   </div>
 
