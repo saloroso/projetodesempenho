@@ -18,7 +18,36 @@
 </head>
 
 <body>
-
+<!--Main Navigation-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
+      <a class="navbar-brand" href="#">Disciplina HTML 5</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/">Como Funciona
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/formulario">Preencher Formulário</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/loginadm">Logar como Líder de Equipe</a>
+            <span class="sr-only">(current)</span>
+          </li>
+        </ul>
+        <span class="navbar-text white-text">
+          AVALIAÇÃO DE DESEMPENHO
+        </span>
+      </div>
+    </nav>
+  </header>
+  <!--Main Navigation-->
+  
   <!-- Start your project here-->
   <!--Main Navigation-->
   <form class="border border-light p-5">
@@ -55,7 +84,18 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Script Próprio -->
   <script type="text/javascript" src="js/jsproprio.min.js"> </script>
-  
+    <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
+    listadeadms = new Array(); // Global da própria página.
+    function Pegarlistadeadms(){
+          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
+          listadeadms_temp = JSON.parse(listadeadms_temp); 
+          if (listadeadms_temp == null){ 
+          listadeadms_temp = new Array();
+          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
+          listadeadms = listadeadms_temp;
+        alert ("Load_session automáticos realizados com sucesso vr01.")}
+  window.onload = Pegarlistadeadms();
+  </script>
 </body>
 
 </html>
