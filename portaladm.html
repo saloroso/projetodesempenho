@@ -44,6 +44,9 @@
   </header>
   <!--Main Navigation-->
 
+<!--Div that will hold the pie chart-->
+    <div id="chart_div" style="width:400; height:300"></div>
+  
   <!-- SCRIPTS -->
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -73,7 +76,7 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
-        alert ("Load_session automáticos da página portal_adm 4.")}
+        alert ("Load_session automáticos da página portal_adm 5.")}
   window.onload = Iniciar_tudo();
     
    // GRÁFICOS DO GOOGLE CHARTS. //
@@ -81,6 +84,29 @@
   google.charts.setOnLoadCallback(drawChart);
   window.onload = alert ("Testando para ver se fazem dois loads.");
     // https://developers.google.com/chart/interactive/docs/basic_preparing_data
+    
+    // Create the data table.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Slices');
+      data.addRows([
+        ['Mushrooms', 3],
+        ['Onions', 1],
+        ['Olives', 1], 
+        ['Zucchini', 1],
+        ['Pepperoni', 2]
+      ]);
+
+      // Set chart options
+      var options = {'title':'How Much Pizza I Ate Last Night',
+                     'width':400,
+                     'height':300};
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+    
     
   </script>
 </body>
