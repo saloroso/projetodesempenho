@@ -65,16 +65,15 @@
     </div>
     
     <div class="lt2_Opcoes2">
-              <h2>POR QUE AVALIAR? 4</h2>
-          <hr>
-          <p>4444444444444444444.</p>
+              <h2>POR QUE AVALIAR? 4</h2>      
+   <div id="series_chart_div" style="width: 100px; height: 200px;"></div> <!-- Função para criar o Gráfico. -->
     </div>
   </div>
 </div>
   
 
   
-       <!-- <div id="series_chart_div" style="width: 100px; height: 200px;"></div> Div that will hold the pie chart-->
+
   
   <!-- SCRIPTS -->
   <!-- JQuery -->
@@ -91,11 +90,7 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
-    
-    $(document).ready(function () {
-    $('.mdb-select').material_select();
-    });
-    
+        
     // Loading a partir do Session Store. 
     listadeadms = new Array(); 
     usuariologado = "";
@@ -150,7 +145,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 10.");
+      alert ("Loading Processado 12.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
