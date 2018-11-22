@@ -76,16 +76,20 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
-        alert ("Load_session automáticos da página portal_adm 5.")}
-  window.onload = Iniciar_tudo();
+        alert ("Load_session automáticos da página portal_adm 6.")
     
-   // GRÁFICOS DO GOOGLE CHARTS. //
-  google.charts.load('current', {packages: ['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-  window.onload = alert ("Testando para ver se fazem dois loads.");
-    // https://developers.google.com/chart/interactive/docs/basic_preparing_data
-    
-    // Create the data table.
+    // Load the Visualization API and the piechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table, 
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+      // Create the data table.
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Topping');
       data.addColumn('number', 'Slices');
@@ -106,9 +110,11 @@
       var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
+    }
+  window.onload = Iniciar_tudo();
+      
     
-    
-  </script>
+ </script>
 </body>
 </html>
 
