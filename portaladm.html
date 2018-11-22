@@ -60,8 +60,11 @@
   <script type="text/javascript" src="js/jsproprio.min.js"> </script>  
    <!-- Script do Google Charts -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
-    listadeadms = new Array(); // Global da própria página.
+    
+    // Loading a partir do Session Store. 
+    listadeadms = new Array(); 
     usuariologado = "";
     function Iniciar_tudo(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
@@ -76,44 +79,45 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
-        alert ("Load_session automáticos da página portal_adm 6.")
-    
-    // Load the Visualization API and the piechart package.
+
+      // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawSeriesChart);
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table, 
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-      // Create the data table.
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Topping');
-      data.addColumn('number', 'Slices');
-      data.addRows([
-        ['Mushrooms', 3],
-        ['Onions', 1],
-        ['Olives', 1], 
-        ['Zucchini', 1],
-        ['Pepperoni', 2]
+      // Função que desenha o gráfico a partir da data table.
+      function drawSeriesChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
+        ['CAN',    80.66,              1.67,      'North America',  33739900],
+        ['DEU',    79.84,              1.36,      'Europe',         81902307],
+        ['DNK',    78.6,               1.84,      'Europe',         5523095],
+        ['EGY',    72.73,              2.78,      'Middle East',    79716203],
+        ['GBR',    80.05,              2,         'Europe',         61801570],
+        ['IRN',    72.49,              1.7,       'Middle East',    73137148],
+        ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
+        ['ISR',    81.55,              2.96,      'Middle East',    7485600],
+        ['RUS',    68.6,               1.54,      'Europe',         141850000],
+        ['USA',    78.09,              2.05,      'North America',  307007000]
       ]);
 
-      // Set chart options
-      var options = {'title':'How Much Pizza I Ate Last Night',
-                     'width':400,
-                     'height':300};
+       // Alguns dados sobre o gráfico que são opcionais.
+      var options = {
+        title: 'Correlation between life expectancy, fertility rate ' +
+               'and population of some world countries (2010)',
+        hAxis: {title: 'Life Expectancy'},
+        vAxis: {title: 'Fertility Rate'},
+        bubble: {textStyle: {fontSize: 11}}
+      };
 
-      // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+       // Criação do gráfico em si.
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
-    }
-    }
-  window.onload = Iniciar_tudo();
+    } // Encerramento da Função Draw Series Chart.
+      alert ("Loading Processado 10.");
+    } // Encerramento da Função Iniciar_Tudo.
       
-    
+  window.onload = Iniciar_tudo();
+
  </script>
 </body>
 </html>
