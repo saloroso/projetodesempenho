@@ -1,0 +1,22 @@
+.lt2_grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "Grade Grade Grade Grade" "Grade Grade Grade Grade" "Grade Grade Grade Grade";
+}
+
+.lt2_Grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Opcoes1 Grafico1 Grafico1" "Opcoes2 Grafico2 Grafico2";
+  grid-area: Grade;
+}
+
+.lt2_Grafico1 { grid-area: Grafico1; }
+
+.lt2_Grafico2 { grid-area: Grafico2; }
+
+.lt2_Opcoes1 { grid-area: Opcoes1; }
+
+.lt2_Opcoes2 { grid-area: Opcoes2; }
