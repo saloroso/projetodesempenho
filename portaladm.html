@@ -45,9 +45,12 @@
     </nav>
   </header>
   <!--Main Navigation-->
-
-<!--Div that will hold the pie chart-->
-    <div id="series_chart_div" style="width: 150x; height: 50px;"></div>
+    
+  <div class="grid-container">
+  
+  <div id="series_chart_div" style="width: 150x; height: 50px;"></div> <!--Div that will hold the pie chart-->
+  
+  </div>
   
   <!-- SCRIPTS -->
   <!-- JQuery -->
@@ -119,7 +122,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 20.");
+      alert ("Loading Processado 21.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
