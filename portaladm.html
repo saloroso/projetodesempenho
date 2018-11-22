@@ -151,6 +151,12 @@
   
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     
+    // SideNav Button Initialization
+    $(".button-collapse").sideNav();
+    // SideNav Scrollbar Initialization
+    var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+    Ps.initialize(sideNavScrollbar
+    
     // Loading a partir do Session Store. 
     listadeadms = new Array(); 
     usuariologado = "";
@@ -205,7 +211,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 1.");
+      alert ("Loading Processado 2.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
