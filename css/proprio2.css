@@ -1,3 +1,4 @@
+
 .lt2_grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -14,9 +15,6 @@
 }
 
 .lt2_Grafico1 { grid-area: Grafico1; }
-
 .lt2_Grafico2 { grid-area: Grafico2; }
-
 .lt2_Opcoes1 { grid-area: Opcoes1; }
-
 .lt2_Opcoes2 { grid-area: Opcoes2; }
