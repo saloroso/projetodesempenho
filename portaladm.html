@@ -18,7 +18,8 @@
   <script type="text/javascript">
   google.charts.load('current', {packages: ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
-    alert ("Testando para ver se fazem dois loads.");
+  window.onload = alert ("Testando para ver se fazem dois loads.");
+    // https://developers.google.com/chart/interactive/docs/basic_preparing_data
   </script>
   
    <!--Main Navigation-->
@@ -80,7 +81,7 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
-        alert ("Load_session automáticos da página portal_adm 2.")}
+        alert ("Load_session automáticos da página portal_adm 3.")}
   window.onload = Iniciar_tudo();
   </script>
 </body>
