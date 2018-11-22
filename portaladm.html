@@ -31,7 +31,7 @@
             <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/formulario">Preencher Formulário</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/loginadm">Logar como Líder de Equipe</a>
+            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/loginadm">Portal do Líder</a>
             <span class="sr-only">(current)</span>
           </li>
         </ul>
@@ -42,24 +42,7 @@
     </nav>
   </header>
   <!--Main Navigation-->
-  
-<form class="text-center border border-light p-5">
-  <p class="h4 mb-4">ACESSO A ÁREA DO LÍDER</p>
-  <input type="email" id="E-mail" class="form-control mb-4" placeholder="E-mail" value="">
-  <input type="password" id="Senha" class="form-control mb-4" placeholder="Senha" value="">
-  <div class="d-flex justify-content-around">
-      <div>
-          <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-              <label class="custom-control-label" for="defaultLoginFormRemember">Lembre-me</label>
-          </div>
-      </div>
-  </div>
-  <button class="btn btn-dark btn-block my-4" type="reset" onclick="Logar_Adm(listadeadms)">LOGAR</button>
-  <p>Não possui uma conta?
-      <a href="https://saloroso.github.io/projetodesempenho/novoadm">Cadastre-se</a>
-  </p>
-</form>
+
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
@@ -74,15 +57,22 @@
   <script type="text/javascript" src="js/jsproprio.min.js"> </script>     
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     listadeadms = new Array(); // Global da própria página.
-    function Pegarlistadeadms(){
+    usuariologado = "";
+    function Iniciar_tudo(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
           if (listadeadms_temp == null){ 
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso vr08.")}
-  window.onload = Pegarlistadeadms();
+          listadeadms = listadeadms_temp;           
+          var usuariologado_temp = sessionStorage.getItem("USUARIO_LOGADO"); 
+          usuariologado_temp = JSON.parse(usuariologado_temp); 
+          if (usuariologado_temp == null){ 
+          usuariologado_temp = "";
+          sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
+          usuariologado = usuariologado_temp;
+        alert ("Load_session automáticos da página portal_adm.")}
+  window.onload = Iniciar_tudo();
   </script>
 </body>
 </html>
