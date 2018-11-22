@@ -45,22 +45,19 @@
   
     <!--Main layout-->
   <main>
-<!--Main container-->
-<div class="container"> 
-  <!--Grid row-->
-  <div class="row">
-      <!--Grid column-->
-      <div class="col-md-7 mb-4">
-        <p></p> <!--Imagem da mata verdade para ser substituida-->
+<div class="container">  <!--Main container-->
+  <div class="row">   <!--Grid row-->
+      <div class="col-md-auto"> <!--Grid column-->
+        <p></p> 
         <div class="view overlay z-depth-1-half">
-            <img src="img/desempenhoj.jpg" class="card-img-top" alt="">
+            <div id="series_chart_div" style="width: 100px; height: 200px;"></div> <!-- Função para criar o Gráfico. -->
             <div class="mask rgba-white-light"></div>
         </div>
         <p></p>
       </div>
       <!--Grid column-->
       <!--Grid column-->
-      <div class="col-md-5 mb-4">
+      <div class="col-md-auto">
           <p></p>
           <h2>POR QUE AVALIAR?</h2>
           <hr>
@@ -233,7 +230,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 16.");
+      alert ("Loading Processado 17.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
