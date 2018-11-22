@@ -104,8 +104,10 @@
       var options = {
         title: 'Correlation between life expectancy, fertility rate ' +
                'and population of some world countries (2010)',
-        hAxis: {title: 'Life Expectancy'},
-        vAxis: {title: 'Fertility Rate'},
+        hAxis: {title: 'Potencial',
+               italic: false},
+        vAxis: {title: 'Competências',
+               italic: false},
         bubble: {textStyle: {
           fontSize: 12,
           fontName: 'Calibri',
@@ -118,7 +120,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 12.");
+      alert ("Loading Processado 16.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
