@@ -47,22 +47,25 @@
   <!--Main Navigation-->
     
   <div class="grid-container">
-  
+  <div class="columns">
     <div class="row">
-      
-      <h2>POR QUE AVALIAR?</h2>
-      
+      <h2>"1"</h2>
       </div>
-      
     <div class="row">
-      
-      <h2>POR QUE AVALIAR?</h2>
- 
+      <h2>"2"</h2>
       </div>
-    
+    </div>
+    div class="columns">
+    <div class="row">
+      <h2>"3"</h2>
+      </div>
+    <div class="row">
+      <div id="series_chart_div" style="width: 100px; height: 200px;"></div> <!--Div that will hold the pie chart-->
+      </div>
+    </div>
   </div>
     
-     <div id="series_chart_div" style="width: 150x; height: 50px;"></div> <!--Div that will hold the pie chart-->
+     
   
   <!-- SCRIPTS -->
   <!-- JQuery -->
@@ -134,7 +137,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 22.");
+      alert ("Loading Processado 24.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
