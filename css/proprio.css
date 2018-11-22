@@ -1,20 +1,14 @@
-.criado_grid-container {
+.ltr_grid-container {
   display: grid;
-  grid-template-columns: 1.4fr 0.1fr 2.3fr 1fr;
-  grid-template-rows: 1.3fr 0.1fr 2fr;
-  grid-template-areas: "1 . 3 3" "2 . 3 3" "2 . 4 4";
+  grid-template-columns: 1.5fr 0.5fr 0.5fr 1.5fr;
+  grid-template-rows: 1.5fr 1.6fr 0.1fr;
+  grid-template-areas: "1 3 3 3" "2 4 4 4" ". . . .";
 }
 
-.criado_1 { grid-area: 1; }
+.ltr_1 { grid-area: 1; }
 
-.criado_2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: ". . ." ". . .";
-  grid-area: 2;
-}
+.ltr_2 { grid-area: 2; }
 
-.criado_3 { grid-area: 3; }
+.ltr_3 { grid-area: 3; }
 
-.criado_4 { grid-area: 4; }
+.ltr_4 { grid-area: 4; }
