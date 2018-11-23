@@ -192,8 +192,18 @@
               }
             }
             }
-          
       
+            for (r=0;r<tamanho_banco;r++){
+              if (listadeadms[r].nome==usuariologado){
+                var tamanho_equipe;
+                for (i=0;i<tamanho_equipe;i++){
+                  if (listadeadms[r].membros[i].respondido==1){
+                    preenchidos_temp = preenchidos_temp++;
+                  }
+                }
+              }
+            }
+
       document.getElementById("Nome_lider").setAttribute("value", usuariologado);
       document.getElementById("Email_lider").setAttribute("value", email_temp);
       document.getElementById("Equipe_lider").setAttribute("value", equipe_temp);
