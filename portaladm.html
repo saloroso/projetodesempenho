@@ -58,15 +58,9 @@
       <div class="card-body">     
         <h4 class="card-title">% DE FORMULÁRIOS PREENCHIDOS</h4>  
         
-         <br>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="Barra_progresso()" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <br>
-        
         <br>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar" id="barra1" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <br>
         
@@ -154,21 +148,7 @@
     listadeadms = new Array(); 
     usuariologado = "";
     
-    function Barra_progresso(){
-      return "width: 50%";
-    }
     
-    function Barra_agora(){
-      return "50";
-    }
-    
-    function Barra_minimo(){
-      return "0";
-    }
-    
-    function Barra_maximo(){
-      return "100";
-    }
     
     function Iniciar_tudo(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
@@ -183,6 +163,8 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
+      
+      document.getElementsById("barra1").setAttribute("style", "width: 25%");
       
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
@@ -220,7 +202,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 62.");
+      alert ("Loading Processado 64.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
