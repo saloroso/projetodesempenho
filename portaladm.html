@@ -162,7 +162,7 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
       
-      document.getElementById("barra1").setAttribute("style", "width: 25%");
+      document.getElementById("barra1").setAttribute("style", "width: 50%");
       
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
@@ -200,7 +200,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 64.");
+      alert ("Loading Processado 66.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
