@@ -175,15 +175,25 @@
       var email_temp;
       var equipe_temp = 0;
       var preenchidos_temp = 0;
-      var tamanho_banco;
-      
+      var tamanho_banco;      
       tamanho_banco = listadeadms.length;   
+      
           for (r=0;r<tamanho_banco;r++){
             if (listadeadms[r].nome==usuariologado){
-              email_temp = "123";
+              email_temp = listadeadms[r].email;
             }
           }
-
+      
+            for (r=0;r<tamanho_banco;r++){
+            if (listadeadms[r].nome==usuariologado){
+              var tamanho_equipe;
+              for (i=0;i<tamanho_equipe;i++){
+                equipe_temp = equipe_temp++;
+              }
+            }
+            }
+          
+      
       document.getElementById("Nome_lider").setAttribute("value", usuariologado);
       document.getElementById("Email_lider").setAttribute("value", email_temp);
       document.getElementById("Equipe_lider").setAttribute("value", equipe_temp);
@@ -225,7 +235,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 12.");
+      alert ("Loading Processado 13.");
       alert ("Usuário Logado: " + usuariologado);
     } // Encerramento da Função Iniciar_Tudo.
       
