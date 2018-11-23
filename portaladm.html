@@ -68,7 +68,16 @@
     
       <div class="col-md-8 mb-4"> <!--Começo do 2ª Coluna-->
 
-            <div id="series_chart_div" style="width: 700px; height: 250px;"></div> <!-- Função para criar o Gráfico. -->
+         <div class="card">  <!-- Começo do Card-->
+      <div class="card-body">     
+        <h4 class="card-title">PONTUAÇÃO</h4>  
+      <div id="series_chart_div" style="width: 50px; height: 30px;"></div> <!-- Função para criar o Gráfico. -->
+      </div>
+    </div> <!-- Fim do Card-->
+        
+        
+        
+            
    
       </div> <!--Fim da 2ª Coluna-->
   </div> <!-- Fim da 1º Linha-->
@@ -189,7 +198,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 23.");
+      alert ("Loading Processado 24.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
