@@ -59,7 +59,7 @@
         <h4 class="card-title">% DE FORMULÁRIOS PREENCHIDOS</h4>  
         
         <div class="progress">
-      <div class="progress-bar" id="barra" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar" id="barra" role="progressbar" aria-valuenow="Barra_agora()" aria-valuemin="Barra_minimo()" aria-valuemax="Barra_maximo()"></div>
         </div>
         
         
@@ -146,6 +146,19 @@
     // Loading a partir do Session Store. 
     listadeadms = new Array(); 
     usuariologado = "";
+    
+    function Barra_agora(){
+      return 50;
+    }
+    
+    function Barra_minimo(){
+      return 0;
+    }
+    
+    function Barra_maximo(){
+      return 100;
+    }
+    
     function Iniciar_tudo(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
@@ -160,10 +173,6 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
       
-          document.getElementById("barra").setAttribute("aria-valuenow", 50);
-          document.getElementById("barra").setAttribute("aria-valuemin", 0);
-          document.getElementById("barra").setAttribute("aria-valuemax", 100);
-
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawSeriesChart);
@@ -200,7 +209,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 59.");
+      alert ("Loading Processado 60.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
