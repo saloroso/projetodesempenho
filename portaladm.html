@@ -59,7 +59,7 @@
         <h4 class="card-title">% DE FORMULÁRIOS PREENCHIDOS</h4>  
         
         <div class="progress">
-  <div class="progress-bar" id="barraprogresso" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" id="barraprogresso" role="progressbar"></div>
         </div>
         
       </div>
@@ -159,9 +159,9 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
       
-          document.getElementById("barraprogresso").valuenow = "5";
-          document.getElementById("barraprogresso").valuemin = "0";
-          document.getElementById("barraprogresso").valuemax = "8";
+          document.getElementById("barraprogresso").aria-valuenow = "5";
+          document.getElementById("barraprogresso").aria-valuemin = "0";
+          document.getElementById("barraprogresso").aria-valuemax = "8";
 
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
@@ -199,7 +199,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 37.");
+      alert ("Loading Processado 38.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
