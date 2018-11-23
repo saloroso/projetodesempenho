@@ -160,9 +160,9 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
       
-          document.getElementById("barra").setAttribute("aria-valuenow", "50");
-          document.getElementById("barra").setAttribute("aria-valuemin", "0");
-          document.getElementById("barra").setAttribute("aria-valuemax", "100");
+          document.getElementById("barra").setAttribute("aria-valuenow", 50);
+          document.getElementById("barra").setAttribute("aria-valuemin", 0);
+          document.getElementById("barra").setAttribute("aria-valuemax", 100);
 
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
@@ -200,7 +200,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 49.");
+      alert ("Loading Processado 59.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
