@@ -60,7 +60,7 @@
         
         <br>
         <div class="progress">
-          <div class="progress-bar" id="barra1" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar" id="barra1" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <br>
         
@@ -146,9 +146,7 @@
         
     // Loading a partir do Session Store. 
     listadeadms = new Array(); 
-    usuariologado = "";
-    
-    
+    usuariologado = ""; 
     
     function Iniciar_tudo(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
@@ -164,7 +162,7 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
       
-      document.getElementsById("barra1").setAttribute("style", "width: 25%");
+      document.getElementById("barra1").setAttribute("style", "width: 25%");
       
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
