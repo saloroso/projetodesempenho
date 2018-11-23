@@ -79,7 +79,7 @@
          <div class="card">  <!-- Começo do Card-->
       <div class="card-body">     
           <h4 class="card-title">DISTRIBUIÇÃO DA EQUIPE</h4>  
-      <div id="series_chart_div" style="width: 600px; height: 280px;"></div> <!-- Função para criar o Gráfico. -->
+      <div id="series_chart_div" style="width: 600px; height: 330px;"></div> <!-- Função para criar o Gráfico. -->
       </div>
     </div> <!-- Fim do Card-->
         
@@ -178,8 +178,8 @@
         
        // Alguns dados sobre o gráfico que são opcionais.
         var options = {
-        hAxis: {title: 'POTENCIAL'},
-        vAxis: {title: 'DESEMPENHO'},
+        hAxis: {title: 'Desempenho'},
+        vAxis: {title: 'Potencial'},
         bubble: {textStyle: {
           fontSize: 12,
           fontName: 'Calibri',
@@ -192,7 +192,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 30.");
+      alert ("Loading Processado 31.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
