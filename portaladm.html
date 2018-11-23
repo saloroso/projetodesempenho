@@ -154,7 +154,6 @@
 
   <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
   
-
   
   <!-- SCRIPTS -->
   <!-- JQuery -->
@@ -230,11 +229,7 @@
       
       // Loadings obrigatórios do google graphics da planilha 1.
       google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawSeriesChart);
-      
-      // Loadings obrigatórios do google graphics da planilha 2.
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawSeriesChart);      
 
       // Função que desenha o gráfico a partir da data table.
       function drawSeriesChart() {
@@ -251,7 +246,8 @@
         ['RUS',    68.6,               1.54,      'Europe',         141850000],
         ['USA',    78.09,              2.05,      'North America',  307007000]
       ]);
-               // Alguns dados sobre o gráfico que são opcionais.
+        
+        // Alguns dados sobre o gráfico que são opcionais.
         var options = {
         hAxis: {title: 'Desempenho'},
         vAxis: {title: 'Potencial'},
@@ -262,6 +258,15 @@
         bold: true,
         italic: false}}
       };
+              // Criação do gráfico em si.
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+  } // Encerramento da Função Draw Series Chart.
+
+      
+      // Loadings obrigatórios do google graphics da planilha 2.
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);                    
         
         // Função que desenha o gráfico 2 a partir da data table.
          function drawChart() {
@@ -281,20 +286,12 @@
         var chart2 = new google.charts.Bar(document.getElementById('columnchart_material'));
         chart2.draw(data2, google.charts.Bar.convertOptions(options2));
       }               
-        
-        
-        
 
-
-       // Criação do gráfico em si.
-      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
-      chart.draw(data, options);
-    } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 20.");
-      alert ("Usuário Logado: " + usuariologado);
-    } // Encerramento da Função Iniciar_Tudo.
-      
   window.onload = Iniciar_tudo();
+      
+      alert ("Loading Processado 21.");
+      alert ("Usuário Logado: " + usuariologado);
+} // Encerramento da Função Iniciar_Tudo.
 
  </script>
 </body>
