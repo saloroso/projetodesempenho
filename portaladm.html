@@ -55,16 +55,26 @@
       <div class="col-md-4 mb-4 mt-4 ml1"> <!-- Começo da 1º Coluna-->        
       <div class="card">  <!-- Começo do Card-->
       <div class="card-body">     
-        <h4 class="card-title">TESTE</h4>
+        <h4 class="card-title">SEUS DADOS</h4>
         <form>
-          <!-- Material input -->
+          <!-- Trecho -->
           <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="formGroupExampleInputMD" placeholder="Example input">
+            <input type="text" class="form-control" id="formGroupExampleInputMD" placeholder="Nome do Líder." disabled>
             <label for="formGroupExampleInputMD">Example label</label>
           </div>
-          <!-- Material input -->
+          <!-- Trecho -->
           <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="formGroupExampleInput2MD" placeholder="Another input" disabled>
+            <input type="text" class="form-control" id="formGroupExampleInput2MD" placeholder="E-mail do Líder." disabled>
+            <label for="formGroupExampleInput2MD">Another label</label>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="formGroupExampleInput2MD" placeholder="Tamanho da Equipe." disabled>
+            <label for="formGroupExampleInput2MD">Another label</label>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="formGroupExampleInput2MD" placeholder="Formulários Preenchidos." disabled>
             <label for="formGroupExampleInput2MD">Another label</label>
           </div>
         </form>
@@ -198,7 +208,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 61.");
+      alert ("Loading Processado 64.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
