@@ -175,14 +175,15 @@
       var email_temp;
       var equipe_temp = 0;
       var preenchidos_temp = 0;
+      var tamanho_banco;
       
-      var tamanho_banco = listadeadms.length;   
-          for (r=0;tamanho_banco;r++){
+      tamanho_banco = listadeadms.length;   
+          for (r=0;r<tamanho_banco;r++){
             if (listadeadms[r].nome==usuariologado){
               email_temp = "123";
             }
           }
- 
+
       document.getElementById("Nome_lider").setAttribute("value", usuariologado);
       document.getElementById("Email_lider").setAttribute("value", email_temp);
       document.getElementById("Equipe_lider").setAttribute("value", equipe_temp);
