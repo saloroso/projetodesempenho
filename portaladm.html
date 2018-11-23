@@ -56,7 +56,7 @@
     
           <div class="card mb-3">  <!-- Começo do Card-->
       <div class="card-body">     
-        <h4 class="card-title">% DE FORMULÁRIOS PREENCHIDOS</h4>  
+        <h4 class="card-title">PREENCHIMENTO</h4>  
         
         <br>
         <div class="progress">
@@ -162,7 +162,7 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
       
-      document.getElementById("barra1").setAttribute("style", "width: 50%");
+      document.getElementById("barra1").setAttribute("style", "width: 50%"); // funcionando, agora só tem que calcular.
       
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
@@ -200,7 +200,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 66.");
+      alert ("Loading Processado 67.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
