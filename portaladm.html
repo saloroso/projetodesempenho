@@ -82,7 +82,7 @@
          <div class="card">  <!-- Começo do Card-->
       <div class="card-body">     
           <h4 class="card-title">DISTRIBUIÇÃO DA EQUIPE</h4>  
-      <div id="series_chart_div" style="width: 800px; height: 500px;"></div> <!-- Função para criar o Gráfico. -->
+      <div id="series_chart_div" style="width: 600px; height: 350px;"></div> <!-- Função para criar o Gráfico. -->
       </div>
     </div> <!-- Fim do Card-->
         
@@ -158,6 +158,9 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           usuariologado = usuariologado_temp;
+      
+      
+        
 
       // Loadings obrigatórios do google graphics.
       google.charts.load('current', {'packages':['corechart']});
