@@ -57,8 +57,11 @@
           <div class="card mb-3">  <!-- Começo do Card-->
       <div class="card-body">     
         <h4 class="card-title">% DE FORMULÁRIOS PREENCHIDOS</h4>  
-        <!--Text-->
-        <p class="card-text">Relação de questionários preenchidos x questionários em aberto.</p>  <!--Text-->
+        
+        <div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        
       </div>
     </div> <!-- Fim do Card-->
         
@@ -79,7 +82,7 @@
          <div class="card">  <!-- Começo do Card-->
       <div class="card-body">     
           <h4 class="card-title">DISTRIBUIÇÃO DA EQUIPE</h4>  
-      <div id="series_chart_div" style="width: 600px; height: 330px;"></div> <!-- Função para criar o Gráfico. -->
+      <div id="series_chart_div" style="width: 600px; height: 400px;"></div> <!-- Função para criar o Gráfico. -->
       </div>
     </div> <!-- Fim do Card-->
         
@@ -192,7 +195,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 31.");
+      alert ("Loading Processado 32.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
