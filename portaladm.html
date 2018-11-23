@@ -59,20 +59,30 @@
         <h4 class="card-title">PREENCHIMENTO</h4>  
         
         <br>
-        <div class="progress">
-          <div class="progress-bar" id="barra1" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
+
         <br>
         
       </div>
     </div> <!-- Fim do Card-->
         
-               <div class="card">  <!-- Começo do Card-->
+      <div class="card">  <!-- Começo do Card-->
       <div class="card-body">     
-        <h4 class="card-title">PONTUAÇÃO</h4>  
-        <!--Text-->
-        <p class="card-text">Os participantes serão avaliados tanto em aspectos comportamentais quanto de desempenho,
-        o que torna a análise de possíveis direcionamentos mais assertivas e detalhada.</p>  <!--Text-->
+        <h4 class="card-title">TESTE</h4>
+        <form>
+          <!-- Material input -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="formGroupExampleInputMD" placeholder="Example input">
+            <label for="formGroupExampleInputMD">Example label</label>
+          </div>
+          <!-- Material input -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="formGroupExampleInput2MD" placeholder="Another input">
+            <label for="formGroupExampleInput2MD">Another label</label>
+          </div>
+        </form>
+        <div class="progress">
+          <div class="progress-bar" id="barra1" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
       </div>
     </div> <!-- Fim do Card-->
            
@@ -200,7 +210,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 67.");
+      alert ("Loading Processado 60.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
