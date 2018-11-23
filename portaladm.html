@@ -155,8 +155,6 @@
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
         
     // Loading a partir do Session Store. 
-    listadeadms = new Array(); 
-    usuariologado = ""; 
     
     function Iniciar_tudo(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
@@ -164,13 +162,13 @@
           if (listadeadms_temp == null){ 
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          listadeadms = listadeadms_temp;           
+          var listadeadms = listadeadms_temp;           
           var usuariologado_temp = sessionStorage.getItem("USUARIO_LOGADO"); 
           usuariologado_temp = JSON.parse(usuariologado_temp); 
           if (usuariologado_temp == null){ 
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
-          usuariologado = usuariologado_temp;
+          var usuariologado = usuariologado_temp;
       
       document.getElementById("barra1").setAttribute("style", "width: 50%"); // funcionando, agora só tem que calcular.
       document.getElementById("Nome_lider").setAttribute("placeholder", usuariologado);
@@ -212,7 +210,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 05.");
+      alert ("Loading Processado 06.");
       alert ("Usuário Logado: " + usuariologado);
     } // Encerramento da Função Iniciar_Tudo.
       
