@@ -152,6 +152,7 @@
   </main>
   <!--Main layout-->
 
+  <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
   
 
   
@@ -168,7 +169,7 @@
   <script type="text/javascript" src="js/jsproprio.min.js"> </script>  
    <!-- Script do Google Charts -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  
+
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
         
     // Loading a partir do Session Store. 
@@ -227,9 +228,13 @@
       document.getElementById("Equipe_lider").setAttribute("value", equipe_temp);
       document.getElementById("Preenchidos_lider").setAttribute("value", preenchidos_temp);
       
-      // Loadings obrigatórios do google graphics.
+      // Loadings obrigatórios do google graphics da planilha 1.
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawSeriesChart);
+      
+      // Loadings obrigatórios do google graphics da planilha 2.
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
 
       // Função que desenha o gráfico a partir da data table.
       function drawSeriesChart() {
@@ -246,8 +251,7 @@
         ['RUS',    68.6,               1.54,      'Europe',         141850000],
         ['USA',    78.09,              2.05,      'North America',  307007000]
       ]);
-        
-       // Alguns dados sobre o gráfico que são opcionais.
+               // Alguns dados sobre o gráfico que são opcionais.
         var options = {
         hAxis: {title: 'Desempenho'},
         vAxis: {title: 'Potencial'},
@@ -258,12 +262,35 @@
         bold: true,
         italic: false}}
       };
+        
+        // Função que desenha o gráfico 2 a partir da data table.
+         function drawChart() {
+        var data2 = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses', 'Profit'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]);
+        var options2 = {
+          chart: {
+            title: 'Company Performance',
+            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          }
+        };
+        var chart2 = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart2.draw(data2, google.charts.Bar.convertOptions(options2));
+      }               
+        
+        
+        
+
 
        // Criação do gráfico em si.
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 18.");
+      alert ("Loading Processado 20.");
       alert ("Usuário Logado: " + usuariologado);
     } // Encerramento da Função Iniciar_Tudo.
       
