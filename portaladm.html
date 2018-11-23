@@ -52,101 +52,27 @@
 <div class="container">  <!--Container Principal-->
   <br>
   <div class="row">   <!-- Começo da 1º Linha-->
-      <div class="col-md-4 mb-4"> <!-- Começo do 1º Bloco-->
+      <div class="col-md-4 mb-4"> <!-- Começo da 1º Coluna-->
     
-      </div> <!-- Fim do 1º Bloco-->
+          <div class="card">  <!-- Começo do Card-->
+      <div class="card-body">     
+        <h4 class="card-title">PONTUAÇÃO</h4>  
+        <!--Text-->
+        <p class="card-text">Os participantes serão avaliados tanto em aspectos comportamentais quanto de desempenho,
+        o que torna a análise de possíveis direcionamentos mais assertivas e detalhada.</p>  <!--Text-->
+      </div>
+    </div> <!-- Fim do Card-->
+           
+      </div> <!-- Fim da 1ª Coluna-->
 
     
-      <div class="col-md-8 mb-4"> <!--Começo do 2º Bloco-->
+      <div class="col-md-8 mb-4"> <!--Começo do 2ª Coluna-->
 
             <div id="series_chart_div" style="width: 700px; height: 250px;"></div> <!-- Função para criar o Gráfico. -->
-
-      </div> <!--Fim do 2º Bloco-->
+   
+      </div> <!--Fim da 2ª Coluna-->
   </div> <!-- Fim da 1º Linha-->
 
-  
-  <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-12 mb-4">
- <!--Card-->
- <div class="card">
-    <!--Card image-->
-    <div class="view overlay">
-      <img src="img/pontos.jpg" class="card-img-top" alt="">
-      <a href="#">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-    <!--Card content-->
-    <div class="card-body">
-      <!--Title-->
-      <h4 class="card-title">PONTUAÇÃO</h4>
-      <!--Text-->
-      <p class="card-text">Os participantes serão avaliados tanto em aspectos comportamentais quanto de desempenho,
-      o que torna a análise de possíveis direcionamentos mais assertivas e detalhada.</p>
-    </div>
-  </div>
-  <!--/.Card-->
-</div>
-<!--Grid column-->
-<!--Grid column-->
-<div class="col-lg-4 col-md-6 mb-4">
-  <!--Card-->
-  <div class="card">
-    <!--Card image-->
-    <div class="view overlay">
-      <img src="img/metodo5.jpg" class="card-img-top" alt="">
-      <a href="#">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-    <!--Card content-->
-    <div class="card-body">
-      <!--Title-->
-      <h4 class="card-title">METODOLOGIA</h4>
-      <!--Text-->
-      <p class="card-text">A sistemática desenvolvida foi elaborada para que haja o envolvimento de dois atores: líder e membro de equipe.
-      O gestor poderá acessar uma área específica, onde visualizará as avaliações em tempo real. O membro, por sua vez, responderá
-      ao questionário de auto-avaliação. O resultado deve ser discutido entre líder e liderado, a partir de reuniões de feedback
-      que possuem o objetivo de expor, compreender e tratar os pontos fortes e fracos. </p>
-    </div>
-  </div>
-  <!--/.Card-->
-</div>
-<!--Grid column-->
-<!--Grid column-->
-<div class="col-lg-4 col-md-6 mb-4">
-  <!--Card-->
-  <div class="card">
-    <!--Card image-->
-    <div class="view overlay">
-      <img src="img/competencias2.jpg" class="card-img-top" alt="">
-      <a href="#">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-    <!--Card content-->
-    <div class="card-body">
-      <!--Title-->
-      <h4 class="card-title">COMPETÊNCIAS</h4>
-      <!--Text-->
-      <p class="card-text">Os formulários utilizados avaliam as principais competências que influenciam o bom resultado,
-        como Autodesenvolvimento, Comunicação, Disciplina, Flexibilidade, Foco no Cliente, Relacionamento Interpessoal e Iniciativa.</p>
-    </div>
-  </div>
-  <!--/.Card-->
-      </div>
-      <!--Grid column-->
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
-      </div>
-      <!--Grid column-->
-      <!--Grid column-->
-      <div class="col-lg-4 col-md-6 mb-4">
-      </div>
-      <!--Grid column-->
-  </div>
-  <!--Grid row-->
 </div>
 <!--Main container-->
   </main>
@@ -225,7 +151,7 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
     } // Encerramento da Função Draw Series Chart.
-      alert ("Loading Processado 19.");
+      alert ("Loading Processado 21.");
     } // Encerramento da Função Iniciar_Tudo.
       
   window.onload = Iniciar_tudo();
