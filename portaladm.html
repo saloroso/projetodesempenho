@@ -258,7 +258,7 @@
         bold: true,
         italic: false}}
       };
-              // Criação do gráfico em si.
+       // Criação do gráfico em si.
       var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
       chart.draw(data, options);
   } // Encerramento da Função Draw Series Chart.
@@ -270,28 +270,28 @@
         
         // Função que desenha o gráfico 2 a partir da data table.
          function drawChart() {
-        var data2 = google.visualization.arrayToDataTable([
+        var data = google.visualization.arrayToDataTable([
           ['Year', 'Sales', 'Expenses', 'Profit'],
           ['2014', 1000, 400, 200],
           ['2015', 1170, 460, 250],
           ['2016', 660, 1120, 300],
           ['2017', 1030, 540, 350]
         ]);
-        var options2 = {
+        var options = {
           chart: {
             title: 'Company Performance',
             subtitle: 'Sales, Expenses, and Profit: 2014-2017',
           }
         };
-        var chart2 = new google.charts.Bar(document.getElementById('columnchart_material'));
-        chart2.draw(data2, google.charts.Bar.convertOptions(options2));
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
       }               
 
-  window.onload = Iniciar_tudo();
-      
-      alert ("Loading Processado 21.");
+      alert ("Loading Processado 22.");
       alert ("Usuário Logado: " + usuariologado);
 } // Encerramento da Função Iniciar_Tudo.
+    
+      window.onload = Iniciar_tudo();
 
  </script>
 </body>
