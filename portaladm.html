@@ -138,9 +138,9 @@
 
                <div class="card">  <!-- Começo do Card-->
       <div class="card-body">     
-        <h4 class="card-title">Texto 4 - Título</h4>  
-        <!--Text-->
-        <p class="card-text">-Texto4.</p>  <!--Text-->
+        <h4 class="card-title">GRÁFICO 2</h4>  
+        <!--Text-->        
+          <div id="columnchart_material" style="width: 680px; height: 400px;"></div>        
       </div>
     </div> <!-- Fim do Card-->
    
@@ -152,9 +152,7 @@
   </main>
   <!--Main layout-->
 
-  <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
-  
-  
+
   <!-- SCRIPTS -->
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -286,8 +284,16 @@
         var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }               
+      
+      
+      
+      
+      
+      
+      
+      
 
-      alert ("Loading Processado 22.");
+      alert ("Loading Processado 23.");
       alert ("Usuário Logado: " + usuariologado);
 } // Encerramento da Função Iniciar_Tudo.
     
