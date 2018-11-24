@@ -56,7 +56,7 @@
 
 <!-- Disparador_do_Modal -->
 <button type="button" id="Disparador_Modal" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" 
-        data-target="#basicExampleModal" onclick="Logar_Adm(listadeadms)">
+        data-target="#centralModalDanger" onclick="Logar_Adm(listadeadms)">
   ACESSAR
 </button> <!-- Fim_do_Disparador_do_Modal -->
 
@@ -136,7 +136,7 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso vr677.")}
+        alert ("Load_session automáticos realizados com sucesso vr685.")}
   window.onload = Pegarlistadeadms();
     
   </script>
