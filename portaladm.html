@@ -57,11 +57,6 @@
         
        <form>
           <!-- Trecho -->
-          <div class="md-form form-group mt-1">
-            <input type="text" class="form-control" id="Nome_lider" placeholder="Nome de usuário" disabled>
-            <label for="formGroupExampleInput2MD">Nome de usuário</label>                                                                                     
-          </div>
-          <!-- Trecho -->
            <span class="label label-warning">Warning Label</span>                                                                                     
           <div class="md-form form-group mt-2">
             <input type="text" class="form-control" id="Email_lider" placeholder="E-mail" disabled>
@@ -198,7 +193,8 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           var usuariologado = usuariologado_temp;
       
-      document.body.innerHTML = document.body.innerHTML.replace('PAINEL22', 'hi');
+      var nome_painel = String(usuariologado);
+      document.body.innerHTML = document.body.innerHTML.replace('PAINEL22', nome_painel);
 
       alert ("Loading Processado 0889.");
       alert ("Usuário Logado: " + usuariologado);
