@@ -39,11 +39,12 @@
   
   <div class="card"> <!-- Inicio_do_Card-->
     
-      <h4 class="card-header bg-secondary mb-3" style="max-width: 18rem;"
+      <h4 class="card-header bg-secondary mb-3"
           lighten-1 dark-text text-uppercase font-weight-bold text-center py-5">
        CADASTRAR COLABORADOR</h4>
     
-      <div class="card-body">        
+      <div class="card-body">  
+      <h4 class="card-title">METODOLOGIA</h4>
 
 <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
 <button type="button" id="Disparador_Modal" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" 
@@ -64,51 +65,16 @@
       
       
 <!-- MODAIS ---------------------------------------------------------------------------------------->      
-      
-      
 
-<!-- Modal de Erro -->
-<!-- Central Modal Medium Danger -->
-<div class="modal fade" id="centralModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<!-- Início do Modal de Cadastrar Novo Membro -->
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
     <!--Content-->
     <div class="modal-content">
       <!--Header-->
       <div class="modal-header">
-        <p class="heading lead">Erro</p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="white-text">&times;</span>
-        </button>
-      </div>
-      <!--Body-->
-      <div class="modal-body">
-        <div class="text-center">
-          <p>Campos vazios ou com valores errados.<br>
-            Favor corrigi-los e tentar novamente.</p>
-        </div>
-      </div>
-      <!--Footer-->
-      <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">OK</a>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!-- Central Modal Medium Danger-->
-        
-
-  <!-- Modal de Acerto -->
-<!-- Central Modal Medium Success -->
-<div class="modal fade" id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-success" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Header-->
-      <div class="modal-header">
-        <p class="heading lead">Acesso Liberado</p>
+        <p class="heading lead">Modal Warning</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="white-text">&times;</span>
         </button>
@@ -117,19 +83,23 @@
       <div class="modal-body">
         <div class="text-center">
           <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-          <p>Seja bem-vindo!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis
+            ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
+            ab officiis totam.</p>
         </div>
       </div>
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-success" href="https://saloroso.github.io/projetodesempenho/portaladm">Entrar</a>
-        <a type="button" class="btn btn-outline-success waves-effect" onclick="Salvar_Logout()" data-dismiss="modal">Voltar</a>
+        <a type="button" class="btn btn-warning">Get it now <i class="fa fa-diamond ml-1 text-white"></i></a>
+        <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">No, thanks</a>
       </div>
     </div>
     <!--/.Content-->
   </div>
 </div>
-<!-- Central Modal Medium Success-->
+<!-- Fim do Modal de Cadastrar Novo Membro -->
+
+
         
 
   
