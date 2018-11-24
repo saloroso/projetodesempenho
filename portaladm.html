@@ -1,207 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> <!-- INÍCIO DO HEAD -->
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Avaliação de Desempenho 2.0</title> <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet"> <!-- Your custom styles (optional) -->
+  <title>Arredonda Minha Nota</title>  <!-- Font Awesome -->
+  <link rel = "icon" type = "image/png" href = "img/prayer.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">  <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
-  </head> <!-- FIM DO HEAD -->
+</head>
 
-<body> 
-   <!--Começo do Main Navigation-->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
-      <a class="navbar-brand" href="#">Disciplina HTML 5</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/">Como Funciona
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/formulario">Preencher Formulário</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/loginadm">Portal do Líder</a>
-            <span class="sr-only">(current)</span>
-          </li>
-        </ul>
-        <span class="navbar-text white-text">
-          AVALIAÇÃO DE DESEMPENHO
-        </span>
-      </div>
-    </nav>
-  </header>
-<!-- Fim do Main Navigation-->
+<body>
+   
+  <header> 
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color"> <!-- Início_da_Barra_de_Navegação-->
+     <img src="img/prayer.png" alt="deu erro" height="25px" width="25px">   
+      <a class="navbar-brand" href="https://saloroso.github.io/projetodesempenho/">
+      &nbsp;&nbsp;&nbsp;ARREDONDA MINHA NOTA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+  <a class="btn btn-outline-warning btn-sm" onclick="Salvar_Logout2()" href="https://saloroso.github.io/projetodesempenho/loginadm" role="button">LOGIN</a>
+  </nav> <!-- Fim_da_Barra_de_Navegação-->
+ </header>  
   
+<div class="container mt-5 mb-2"> <!-- Inicio_do_Container_Principal-->
   
-  <!--ANOTAÇÕES-->
-  <!--MD É MEDIUM E DETERMINA PARA DESKTOP, O QUE IMPORTA AQUI; O TAMANHO É DE 1 A 12 CONFORME QUANTIDADE DE COLUNAS PRA OCUPAR.-->
-  
-    <!--Main layout-->
-  <main>
-<div class="container">  <!--Container Principal-->
-  <br>
-  <div class="row">   <!-- Começo da 1º Linha-->
-      <div class="col-md-4 mb-4 mt-4 ml1"> <!-- Começo da 1º Coluna-->        
-      <div class="card">  <!-- Começo do Card-->
-      <div class="card-body">     
-        <h4 class="card-title">PERFIL</h4>
-        <form>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Nome_lider" placeholder="Nome do Líder." disabled>
-          </div>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Email_lider" placeholder="E-mail do Líder." disabled>
-            <label for="formGroupExampleInput2MD">E-mail:</label>
-          </div>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Equipe_lider" placeholder="Tamanho da Equipe." disabled>
-            <label for="formGroupExampleInput2MD">Membros na equipe:</label>
-          </div>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Preenchidos_lider" placeholder="Formulários Preenchidos." disabled>
-            <label for="formGroupExampleInput2MD">Formulários preenchidos:</label>
-          </div>
-        </form>
-        
-        <p class="h6 mb-2 text-left ">PROGRESSO</p>
-        <div class="progress">
-          <div class="progress-bar" id="barra1" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        
-    <!-- Começo do Botão Modal-->
-  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  <div class="card"> <!-- Inicio_do_Card-->
+    
+      <h4 class="card-header bg-warning lighten-1 dark-text text-uppercase font-weight-bold text-center py-5">
+       Área do Líder</h4>
+    
+      <div class="card-body">        
+
+    <form class="text-center border border-light p-5">
+
+    <input type="email" id="E-mail" class="form-control mb-4" placeholder="E-mail" value="">
+    <input type="password" id="Senha" class="form-control mb-4" placeholder="Senha" value="">
+      
+      <p>Não possui uma conta?
+      <a href="https://saloroso.github.io/projetodesempenho/novoadm" text-warning>Cadastre-se</a>
+      </p>
+      
+
+<!-- Disparador_do_Modal -->
+<button type="button" id="Disparador_Modal" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" 
+        data-target="#centralModalDanger" onclick="Logar_Adm(listadeadms)">
+  ACESSAR
+</button> <!-- Fim_do_Disparador_do_Modal -->
+
+<!-- Modal de Erro -->
+<!-- Central Modal Medium Danger -->
+<div class="modal fade" id="centralModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+    <!--Content-->
     <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Erro</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true" class="white-text">&times;</span>
         </button>
       </div>
-      <div class="modal-body mx-3">
-        
-        22222222222222222
-     <form>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Nome_liderado" placeholder="Nome do liderado." >
-            <label for="formGroupExampleInputMD">Nome:</label>
-          </div>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Codigo_formulario" placeholder="Código p/ formuláio." >
-            <label for="formGroupExampleInput2MD">Código:</label>
-          </div>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Cargo_liderado" placeholder="Cargo do liderado." >
-            <label for="formGroupExampleInput2MD">Cargo:</label>
-          </div>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Desempenho_liderado" placeholder="Desempenho do liderado." >
-            <label for="formGroupExampleInput2MD">Desempenho:</label>
-          </div>
-      </form>
-        2222222222222222222222222222
-        
-
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <p>Campos vazios ou com valores errados.<br>
+            Favor corrigi-los e tentar novamente.</p>
+        </div>
       </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-default">Login</button>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">OK</a>
       </div>
     </div>
+    <!--/.Content-->
   </div>
 </div>
-
-<div class="text-center">
-  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch
-    Modal Login Form</a>
-</div> <!-- Fim do Botão Modal -->
+<!-- Central Modal Medium Danger-->
         
+
+  <!-- Modal de Acerto -->
+<!-- Central Modal Medium Success -->
+<div class="modal fade" id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Acesso Liberado</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
       </div>
-    </div> <!-- Fim do Card-->
-           
-      </div> <!-- Fim da 1ª Coluna-->
-
-    
-      <div class="col-md-8 mb-4 mt-4 ml1"> <!--Começo do 2ª Coluna-->
-
-         <div class="card">  <!-- Começo do Card-->
-      <div class="card-body">     
-          <h4 class="card-title-center">EQUIPE</h4>  
-      <div id="series_chart_div" style="width: 680px; height: 400px;"></div> <!-- Função para criar o Gráfico. -->
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+          <p>Seja bem-vindo!</p>
+        </div>
       </div>
-    </div> <!-- Fim do Card-->
-        
-      </div> <!--Fim da 2ª Coluna-->
-  </div> <!-- Fim da 1º Linha-->
-
-  <div class="row">   <!-- Começo da 2º Linha-->
-      <div class="col-md-4 mb-4 mt-4 ml1"> <!-- Começo da 3º Coluna-->
-        
-     <div class="card">  <!-- Começo do Card-->  
-     <div class="card-body">     
-        <h4 class="card-title">CADASTRAR MEMBRO</h4>
-        
-  
-         </div>
-    </div> <!-- Fim do Card-->  
-      </div> <!-- Fim da 3ª Coluna-->
-
-    
-      <div class="col-md-8 mb-4 mt-4 ml1"> <!--Começo do 4ª Coluna-->
-
-               <div class="card">  <!-- Começo do Card-->
-      <div class="card-body">     
-        <h4 class="card-title">GRÁFICO 2</h4>  
-        <!--Text-->        
-          <div id="columnchart_material" style="width: 680px; height: 400px;"></div>        
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-success" href="https://saloroso.github.io/projetodesempenho/portaladm">Entrar</a>
+        <a type="button" class="btn btn-outline-success waves-effect" onclick="Salvar_Logout()" data-dismiss="modal">Voltar</a>
       </div>
-    </div> <!-- Fim do Card-->
-   
-      </div> <!--Fim da 4ª Coluna-->
-  </div> <!-- Fim da 2º Linha-->
-  
+    </div>
+    <!--/.Content-->
+  </div>
 </div>
-<!--Main container-->
-  </main>
-  <!--Main layout-->
-  
-
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Script Próprio -->
-  <script type="text/javascript" src="js/jsproprio.min.js"> </script>  
-   <!-- Script do Google Charts -->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-  <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
+<!-- Central Modal Medium Success-->
         
-    // Loading a partir do Session Store. 
+</div> <!-- Fim_do_Card_Body -->
+</div> <!-- Fim_do_Card-->
+        
+ </div> <!-- Fim_do_Container_Principal-->
+  
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>  
+  <script type="text/javascript" src="js/popper.min.js"></script> <!-- Bootstrap tooltips -->  
+  <script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script> <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/jsproprio.min.js"> </script> <!-- Script Próprio -->  
+    
+  <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     
     function Iniciar_tudo(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
@@ -317,13 +251,183 @@
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }                 
       
-      alert ("Loading Processado 27.");
+      alert ("Loading Processado 2.");
       alert ("Usuário Logado: " + usuariologado);
 } // Encerramento da Função Iniciar_Tudo.
     
       window.onload = Iniciar_tudo();
-
- </script>
+    
+  </script>
+  
 </body>
+  
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <main>
+<div class="container">  <!--Container Principal-->
+  <br>
+  <div class="row">   <!-- Começo da 1º Linha-->
+      <div class="col-md-4 mb-4 mt-4 ml1"> <!-- Começo da 1º Coluna-->        
+      <div class="card">  <!-- Começo do Card-->
+      <div class="card-body">     
+        <h4 class="card-title">PERFIL</h4>
+        <form>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Nome_lider" placeholder="Nome do Líder." disabled>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Email_lider" placeholder="E-mail do Líder." disabled>
+            <label for="formGroupExampleInput2MD">E-mail:</label>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Equipe_lider" placeholder="Tamanho da Equipe." disabled>
+            <label for="formGroupExampleInput2MD">Membros na equipe:</label>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Preenchidos_lider" placeholder="Formulários Preenchidos." disabled>
+            <label for="formGroupExampleInput2MD">Formulários preenchidos:</label>
+          </div>
+        </form>
+        
+        <p class="h6 mb-2 text-left ">PROGRESSO</p>
+        <div class="progress">
+          <div class="progress-bar" id="barra1" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        
+    <!-- Começo do Botão Modal-->
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+
+     <form>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Nome_liderado" placeholder="Nome do liderado." >
+            <label for="formGroupExampleInputMD">Nome:</label>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Codigo_formulario" placeholder="Código p/ formuláio." >
+            <label for="formGroupExampleInput2MD">Código:</label>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Cargo_liderado" placeholder="Cargo do liderado." >
+            <label for="formGroupExampleInput2MD">Cargo:</label>
+          </div>
+          <!-- Trecho -->
+          <div class="md-form form-group mt-5">
+            <input type="text" class="form-control" id="Desempenho_liderado" placeholder="Desempenho do liderado." >
+            <label for="formGroupExampleInput2MD">Desempenho:</label>
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch
+    Modal Login Form</a>
+</div> <!-- Fim do Botão Modal -->
+        
+      </div>
+    </div> <!-- Fim do Card-->
+           
+      </div> <!-- Fim da 1ª Coluna-->
+
+    
+      <div class="col-md-8 mb-4 mt-4 ml1"> <!--Começo do 2ª Coluna-->
+
+         <div class="card">  <!-- Começo do Card-->
+      <div class="card-body">     
+          <h4 class="card-title-center">EQUIPE</h4>  
+      <div id="series_chart_div" style="width: 680px; height: 400px;"></div> <!-- Função para criar o Gráfico. -->
+      </div>
+    </div> <!-- Fim do Card-->
+        
+      </div> <!--Fim da 2ª Coluna-->
+  </div> <!-- Fim da 1º Linha-->
+
+  <div class="row">   <!-- Começo da 2º Linha-->
+      <div class="col-md-4 mb-4 mt-4 ml1"> <!-- Começo da 3º Coluna-->
+        
+     <div class="card">  <!-- Começo do Card-->  
+     <div class="card-body">     
+        <h4 class="card-title">CADASTRAR MEMBRO</h4>
+        
+  
+         </div>
+    </div> <!-- Fim do Card-->  
+      </div> <!-- Fim da 3ª Coluna-->
+
+    
+      <div class="col-md-8 mb-4 mt-4 ml1"> <!--Começo do 4ª Coluna-->
+
+               <div class="card">  <!-- Começo do Card-->
+      <div class="card-body">     
+        <h4 class="card-title">GRÁFICO 2</h4>  
+        <!--Text-->        
+          <div id="columnchart_material" style="width: 680px; height: 400px;"></div>        
+      </div>
+    </div> <!-- Fim do Card-->
+   
+      </div> <!--Fim da 4ª Coluna-->
+  </div> <!-- Fim da 2º Linha-->
+  
+</div>
+<!--Main container-->
+  </main>
+  <!--Main layout-->    
 
