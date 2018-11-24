@@ -77,7 +77,6 @@
       <!--Body-->
       <div class="modal-body">
         <div class="text-center">
-          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
           <p>Campos vazios ou com valores errôneos,
             favor corrigi-los e tentar novamente.</p>
         </div>
@@ -94,25 +93,38 @@
         
 
   <!-- Modal de Acerto -->
-<div class="modal fade" id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  
-  <div class="modal-dialog" role="document">
+<!-- Central Modal Medium Success -->
+<div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
     <div class="modal-content">
+      <!--Header-->
       <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel">Certo</h5>
+        <p class="heading lead">Acesso Liberado</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true" class="white-text">&times;</span>
         </button>
       </div>
+      <!--Body-->
       <div class="modal-body">
-        Certo
+        <div class="text-center">
+          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+          <p>Seja bem-vindo!</p>
+        </div>
       </div>
-      <div class="modal-footer">
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-success">Get it now </a>
+        <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No, thanks</a>
+        <a class="btn btn-success" href="https://saloroso.github.io/projetodesempenho/loginadm" role="button">LOGIN</a>
       </div>
     </div>
+    <!--/.Content-->
   </div>
-</div> 
-    </form>
+</div>
+<!-- Central Modal Medium Success-->
   
         
         
@@ -136,7 +148,7 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso vr689.")}
+        alert ("Load_session automáticos realizados com sucesso vr6898.")}
   window.onload = Pegarlistadeadms();
     
   </script>
