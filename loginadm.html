@@ -44,23 +44,27 @@
     
       <div class="card-body">        
 
-        <form class="text-center border border-light p-5">
-  
-  <input type="email" id="E-mail" class="form-control mb-4" placeholder="E-mail" value="">
-  <input type="password" id="Senha" class="form-control mb-4" placeholder="Senha" value="">
-  <div class="d-flex justify-content-around">
+    <form class="text-center border border-light p-5">
+
+    <input type="email" id="E-mail" class="form-control mb-4" placeholder="E-mail" value="">
+    <input type="password" id="Senha" class="form-control mb-4" placeholder="Senha" value="">
+    <div class="d-flex justify-content-around">
+
       <div>
           <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
               <label class="custom-control-label" for="defaultLoginFormRemember">Lembre-me</label>
+          <br>
+      </div>
+
           </div>
       </div>
-  </div>
 
-  <p>Não possui uma conta?
-      <a href="https://saloroso.github.io/projetodesempenho/novoadm">Cadastre-se</a>
-  </p>
-</form>
+      <p>Não possui uma conta?
+          <a href="https://saloroso.github.io/projetodesempenho/novoadm" warning-text>Cadastre-se</a>
+      </p>
+      
+    </form>
         
               </div> <!-- Fim_do_Card_Body -->
         
@@ -130,7 +134,7 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso vr12.")}
+        alert ("Load_session automáticos realizados com sucesso vr13.")}
   window.onload = Pegarlistadeadms();
   </script>
   
