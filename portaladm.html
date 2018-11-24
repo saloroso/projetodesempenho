@@ -90,7 +90,7 @@
       </div>
       <!--Body-->
       <div class="modal-body"> <!-- Início do Formulario para Cadastrar Novo Membro -->
-      <form class="text-left border border-warning p-1">
+      <form class="text-left p-1">
       <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nome">    
       <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nota de Desempenho">                                                                                                
       <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Código p/ Formulário">
@@ -143,9 +143,7 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           var usuariologado = usuariologado_temp;
-      
-     
-      
+
       alert ("Loading Processado 2.");
       alert ("Usuário Logado: " + usuariologado);
 } // Encerramento da Função Iniciar_Tudo.
