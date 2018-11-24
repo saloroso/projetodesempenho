@@ -50,15 +50,15 @@
                                   
 <div class="card border-dark"> <!-- Inicio_do_Card do Painel-->
       <h4 class="card-header text-warning bg-dark mb-1"
-         lighten-1 text-uppercase font-weight-bold text-left py-1">PAINEL22</h4>                                                           
+         lighten-1 text-uppercase font-weight-bold text-left py-1">Substituir1</h4>                                                           
       <div class="card-body text-left">  
        <form>
            <span class="label label-warning mb-3 font-weight-bold">E-mail: </span> 
-           <span class="label label-warning mb-3 text-warning font-weight-bold">Warning Label</span><br> 
-           <span class="label label-warning mb-3 font-weight-bold">Membros da equipe: </span>
-           <span class="label label-warning mb-3 text-warning font-weight-bold">Warning Label</span><br>
+           <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir2</span><br> 
+           <span class="label label-warning mb-3 font-weight-bold">Membros na equipe: </span>
+           <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir3</span><br>
            <span class="label label-warning mb-3 font-weight-bold">Formulários preenchidos: </span> 
-           <span class="label label-warning mb-3 text-warning font-weight-bold">Warning Label</span><br>                                                                                                                 
+           <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir4</span><br>                                                                                                                 
         </form>
                                                           
 </div> <!-- Fim_do_Card_Body -->
@@ -181,10 +181,35 @@
           var usuariologado = usuariologado_temp;
       
       var nome_painel = String(usuariologado);
-      document.body.innerHTML = document.body.innerHTML.replace('PAINEL22', nome_painel);
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir1', nome_painel);
+      
+      var tamanho_banco = listadeadms.length; 
+      var tamanho_equipe = 0;
+      var email_temp = "";
+      var preenchidos_temp = 0;
+      
+      for (r=0;r<tamanho_banco;r++){
+        if (listadeadms[r].nome==usuariologado){
+              email_temp = listadeadms[r].email;}}
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir2', email_temp);
+      
+      for (i=0;i<tamanho_banco;i++){
+        if (listadeadms[i].nome==usuariologado){
+          tamanho_equipe = listadeadms[i].membros;
+          for (j=0;j<tamanho_equipe;j++){
+            if (listadeadms[i].membros[j].respondido==1)
+            {
+              preenchidos_temp = preenchidos_temp + 1;
+            }
+          }
+        }
+      }
+      
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
+      
+      alert ("Loading Processado 346.");
 
-      alert ("Loading Processado 345.");
-      alert ("Usuário Logado: " + usuariologado);
 } // Encerramento da Função Iniciar_Tudo.
     
       window.onload = Iniciar_tudo();
