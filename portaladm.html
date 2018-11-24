@@ -134,7 +134,7 @@
       </div>
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-warning" data-dismiss="modal" onclick="Cadastrar_Membro(listadeadms)" >Registrar</a>
+        <a type="button" class="btn btn-warning" onclick="Cadastrar_Membro(listadeadms)" data-dismiss="modal">Registrar</a>
         <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
       </div>
     </div>
@@ -165,20 +165,26 @@
     
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     
+    listadeadms = new Array();
+    usuariologado = "";
+    
     function Iniciar_tudo(){
-                                
+          
+          // Recebendo banco de dados armazenado em session.
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
           if (listadeadms_temp == null){ 
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          var listadeadms = listadeadms_temp;           
+          listadeadms = listadeadms_temp;      
+      
+          // Recebendo usuario armazenado em Session.      
           var usuariologado_temp = sessionStorage.getItem("USUARIO_LOGADO"); 
           usuariologado_temp = JSON.parse(usuariologado_temp); 
           if (usuariologado_temp == null){ 
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
-          var usuariologado = usuariologado_temp;
+          usuariologado = usuariologado_temp;
        
       // Variáveis que preencherão o painel.
       var nome_painel = String(usuariologado);
@@ -211,7 +217,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
       
-      alert ("Loading Processado 1.");
+      alert ("Loading Processado 4.");
 
 } // Encerramento da Função Iniciar_Tudo.
     
