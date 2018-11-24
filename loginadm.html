@@ -35,7 +35,7 @@
   </nav> <!-- Fim_da_Barra_de_Navegação-->
  </header>  
   
-<div class="container mt-6 mb-2"> <!-- Inicio_do_Container_Principal-->
+<div class="container mt-5 mb-2"> <!-- Inicio_do_Container_Principal-->
   
   <div class="card"> <!-- Inicio_do_Card-->
     
@@ -55,12 +55,12 @@
       
 
 <!-- Disparador_do_Modal -->
-<button type="button" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" data-target="#basicExampleModal"
-    onclick="Logar_Adm(listadeadms)">
+<button type="button" id="Disparador_Modal" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" 
+        data-target="#basicExampleModal" onclick="Logar_Adm(listadeadms)">
   ACESSAR
 </button> <!-- Fim_do_Disparador_do_Modal -->
 
-<!-- Modal_em_Si -->
+<!-- Modal de Erro -->
 <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   
   <div class="modal-dialog" role="document">
@@ -72,66 +72,42 @@
         </button>
       </div>
       <div class="modal-body">
-        Seja bem-vindo!
+        Erro
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Acessar_Portal()">ENTRAR</button>
         <a href="https://saloroso.github.io/projetodesempenho/portaladm" class="btn btn-dark ound">Quero me Avaliar!</a> 
       </div>
     </div>
   </div>
 </div> 
- 
     </form>
         
+!-- Modal_de_Acerto -->
+<div class="modal fade" id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">ACESSO AUTORIZADO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Acerto
+      </div>
+      <div class="modal-footer">
+        <a href="https://saloroso.github.io/projetodesempenho/portaladm" class="btn btn-dark ound">Quero me Avaliar!</a> 
+      </div>
+    </div>
+  </div>
+</div> 
+    </form>      
         
- 
+        
     </div> <!-- Fim_do_Card_Body -->
-
 </div> <!-- Fim_do_Card-->
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-    
-  
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-
  </div> <!-- Fim_do_Container_Principal-->
   
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>  
@@ -149,7 +125,7 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso vr18.")}
+        alert ("Load_session automáticos realizados com sucesso vr2.")}
   window.onload = Pegarlistadeadms();
     
   </script>
