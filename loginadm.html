@@ -35,12 +35,12 @@
   </nav> <!-- Fim_da_Barra_de_Navegação-->
  </header>  
   
-<div class="container mt-4 mb-4"> <!-- Inicio_do_Container_Principal-->
+<div class="container mt-6 mb-2"> <!-- Inicio_do_Container_Principal-->
   
   <div class="card"> <!-- Inicio_do_Card-->
     
       <h4 class="card-header bg-warning lighten-1 dark-text text-uppercase font-weight-bold text-center py-5">
-       Acesso a Área do Líder</h4>
+       Área do Líder</h4>
     
       <div class="card-body">        
 
@@ -55,13 +55,13 @@
       
 
 <!-- Disparador_do_Modal -->
-<button type="button" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
-  Launch demo modal
+<button type="button" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" data-target="#basicExampleModal"
+    onclick="Logar_Adm(listadeadms)">
+  ACESSAR
 </button> <!-- Fim_do_Disparador_do_Modal -->
 
 <!-- Modal_em_Si -->
-<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" 
-     onclick="Logar_Adm(listadeadms)">
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -75,14 +75,14 @@
         Seja bem-vindo!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">ENTRAR</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Acessar_Portal()">ENTRAR</button>
+        <a href="https://saloroso.github.io/projetodesempenho/portaladm" class="btn btn-dark ound">Quero me Avaliar!</a> 
       </div>
     </div>
   </div>
 </div> 
  
     </form>
-        
         
         
  
@@ -149,8 +149,9 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso vr17.")}
+        alert ("Load_session automáticos realizados com sucesso vr18.")}
   window.onload = Pegarlistadeadms();
+    
   </script>
   
 </body>
