@@ -90,7 +90,7 @@
       </div>
       <!--Body-->
       <div class="modal-body"> <!-- Início do Formulario para Cadastrar Novo Membro -->
-      <form class="text-left border border-warning p-3">
+      <form class="text-left border border-warning p-1">
       <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nome">    
       <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nota de Desempenho">                                                                                                
       <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Código p/ Formulário">
@@ -98,7 +98,7 @@
       </div>
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-warning" onclick="Criar_respondente()" >Registrar</a>
+        <a type="button" class="btn btn-warning" data-dismiss="modal" onclick="Teste3()" >Registrar</a>
         <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
       </div>
     </div>
@@ -130,6 +130,7 @@
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     
     function Iniciar_tudo(){
+                                
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
           if (listadeadms_temp == null){ 
@@ -143,105 +144,7 @@
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           var usuariologado = usuariologado_temp;
       
-      // Cálculo dos campos do form seus dados.
-      var email_temp;
-      var equipe_temp = 0;
-      var preenchidos_temp = 0;
-      var tamanho_banco;
-      var porcentagem;      
-      tamanho_banco = listadeadms.length;         
-          for (r=0;r<tamanho_banco;r++){
-            if (listadeadms[r].nome==usuariologado){
-              email_temp = listadeadms[r].email;
-            }
-          }      
-            for (r=0;r<tamanho_banco;r++){
-            if (listadeadms[r].nome==usuariologado){
-              var tamanho_equipe;
-              for (i=0;i<tamanho_equipe;i++){
-                equipe_temp = equipe_temp++;
-              }
-            }
-            }      
-            for (r=0;r<tamanho_banco;r++){
-              if (listadeadms[r].nome==usuariologado){
-                var tamanho_equipe;
-                for (i=0;i<tamanho_equipe;i++){
-                  if (listadeadms[r].membros[i].respondido==1){
-                    preenchidos_temp = preenchidos_temp++;
-                  }
-                }
-              }
-            }
-      
-      // Preenchimento dos campos do form seus dados.
-      porcentagem = ((100 * preenchidos_temp)/equipe_temp);
-      var passagem = ("width: " + porcentagem + "%");      
-      document.getElementById("barra1").setAttribute("style", passagem);    
-      document.getElementById("Nome_lider").setAttribute("value", usuariologado);
-      document.getElementById("Email_lider").setAttribute("value", email_temp);
-      document.getElementById("Equipe_lider").setAttribute("value", equipe_temp);
-      document.getElementById("Preenchidos_lider").setAttribute("value", preenchidos_temp);
-      
-      // Loadings obrigatórios do google graphics da planilha 1.
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawSeriesChart);      
-
-      // Função que desenha o gráfico a partir da data table.
-      function drawSeriesChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['ID', 'Potencial', 'Desempenho', 'Region',     'Population'],
-        ['CAN',    80.66,              1.67,      'North America',  33739900],
-        ['DEU',    79.84,              1.36,      'Europe',         81902307],
-        ['DNK',    78.6,               1.84,      'Europe',         5523095],
-        ['EGY',    72.73,              2.78,      'Middle East',    79716203],
-        ['GBR',    80.05,              2,         'Europe',         61801570],
-        ['IRN',    72.49,              1.7,       'Middle East',    73137148],
-        ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
-        ['ISR',    81.55,              2.96,      'Middle East',    7485600],
-        ['RUS',    68.6,               1.54,      'Europe',         141850000],
-        ['USA',    78.09,              2.05,      'North America',  307007000]
-      ]);
-        
-        // Alguns dados sobre o gráfico que são opcionais.
-        var options = {
-        hAxis: {title: 'Desempenho'},
-        vAxis: {title: 'Potencial'},
-        bubble: {textStyle: {
-          fontSize: 12,
-          fontName: 'Calibri',
-        color: 'black',
-        bold: true,
-        italic: false}}
-      };
-       // Criação do gráfico em si.
-      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
-      chart.draw(data, options);
-  } // Encerramento da Função Draw Series Chart.
-
-      
-      // Loadings obrigatórios do google graphics da planilha 2.
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);                    
-        
-        // Função que desenha o gráfico 2 a partir da data table.
-         function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350]
-        ]);
-        var options = {
-          chart: {
-            title: 'Company Performance',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-          }
-        };
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }                 
+     
       
       alert ("Loading Processado 2.");
       alert ("Usuário Logado: " + usuariologado);
