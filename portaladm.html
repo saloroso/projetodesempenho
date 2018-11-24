@@ -51,31 +51,31 @@
 <div class="card border-dark"> <!-- Inicio_do_Card do Painel-->
       <h4 class="card-header text-warning bg-dark mb-3"
          lighten-1 text-uppercase font-weight-bold text-left py-2">
-       PAINEL</h4>
+       PAINEL22</h4>
                                                                    
       <div class="card-body text-left">  
         
        <form>
           <!-- Trecho -->
-          <div class="md-form form-group mt-3">
-            <input type="text" class="form-control" id="Nome_lider" placeholder="Nome do Líder." disabled>
+          <div class="md-form form-group mt-1">
+            <input type="text" class="form-control" id="Nome_lider" placeholder="Nome de usuário" disabled>
+            <label for="formGroupExampleInput2MD">Nome de usuário</label>                                                                                     
           </div>
           <!-- Trecho -->
            <span class="label label-warning">Warning Label</span>                                                                                     
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Email_lider" placeholder="E-mail do Líder." disabled>
-            <label for="formGroupExampleInput2MD">E-mail:</label>
+          <div class="md-form form-group mt-2">
+            <input type="text" class="form-control" id="Email_lider" placeholder="E-mail" disabled>
+            <label for="formGroupExampleInput2MD">E-mail</label>
+          </div>
+          <!-- Trecho -->                                    
+          <div class="md-form form-group mt-2">
+            <input type="text" class="form-control" id="Equipe_lider" placeholder="Membros na equipe" disabled>
+            <label for="formGroupExampleInput2MD">Membros na equipe</label>
           </div>
           <!-- Trecho -->
-          <span class="badge badge-warning">Warning</span>                                       
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Equipe_lider" placeholder="Tamanho da Equipe." disabled>
-            <label for="formGroupExampleInput2MD">Membros na equipe:</label>
-          </div>
-          <!-- Trecho -->
-          <div class="md-form form-group mt-5">
-            <input type="text" class="form-control" id="Preenchidos_lider" placeholder="Formulários Preenchidos." disabled>
-            <label for="formGroupExampleInput2MD">Formulários preenchidos:</label>
+          <div class="md-form form-group mt-2">
+            <input type="text" class="form-control" id="Preenchidos_lider" placeholder="Membros que já se avaliaram" disabled>
+            <label for="formGroupExampleInput2MD">Membros que já se avaliaram</label>
           </div>
         </form>
                                                           
@@ -197,6 +197,8 @@
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
           var usuariologado = usuariologado_temp;
+      
+      document.body.innerHTML = document.body.innerHTML.replace('PAINEL22', 'hi');
 
       alert ("Loading Processado 0889.");
       alert ("Usuário Logado: " + usuariologado);
