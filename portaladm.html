@@ -37,20 +37,19 @@
   
 <div class="container mt-5 mb-2"> <!-- Inicio_do_Container_Principal-->
   
-  <div class="card border-dark"> <!-- Inicio_do_Card-->
-    
+  <div class="card border-dark"> <!-- Inicio_do_Card de Cadastrar novo Colaborador -->
       <div class="card-body text-left">  
-
 <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
 <button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
-        data-target="#Modal1"> INSERIR NOVO
-</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->
-                                                              
+        data-target="#Modal1"> CADASTRAR NOVO COLABORADOR
+</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->                                            
 </div> <!-- Fim_do_Card_Body -->
-</div> <!-- Fim_do_Card-->
+</div> <!-- Fim_do_Card de Cadastrar novo Colaborador -->
         
- </div> <!-- Fim_do_Container_Principal-->
-      
+  
+  
+  
+ 
       
      
  <!-- OUTRO CARD -->                                        
@@ -69,7 +68,8 @@
 </div> <!-- Fim_do_Card_Body -->
 </div> <!-- Fim_do_Card-->
       
-      
+</div> <!-- Fim_do_Container_Principal-->
+        
       
       
       
@@ -83,24 +83,33 @@
     <div class="modal-content">
       <!--Header-->
       <div class="modal-header">
-        <p class="heading lead">Modal Warning</p>
+        <p class="heading lead">Cadastrar novo Colaborador</p>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true" class="white-text">&times;</span>
         </button>
       </div>
       <!--Body-->
-      <div class="modal-body">
-        <div class="text-center">
-          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis
-            ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-            ab officiis totam.</p>
-        </div>
+      <div class="modal-body"> <!-- Início do Formulario para Cadastrar Novo Membro -->
+      <p class="text-left h3">Left aligned text on all viewport sizes.</p>
+                             
+          
+     <form class="text-left border border-warning p-5">
+
+    <!-- Email -->
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+</form>
+<!-- Default form login -->
+                             
+                             
       </div>
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-warning">Get it now <i class="fa fa-diamond ml-1 text-white"></i></a>
-        <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">No, thanks</a>
+        <a type="button" class="btn btn-warning">Registrar</a>
+        <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
       </div>
     </div>
     <!--/.Content-->
@@ -112,6 +121,16 @@
         
 
   
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>  
   <script type="text/javascript" src="js/popper.min.js"></script> <!-- Bootstrap tooltips -->  
   <script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- Bootstrap core JavaScript -->
@@ -287,9 +306,7 @@
   <br>
   <div class="row">   <!-- Começo da 1º Linha-->
       <div class="col-md-4 mb-4 mt-4 ml1"> <!-- Começo da 1º Coluna-->        
-      <div class="card">  <!-- Começo do Card-->
-      <div class="card-body">     
-        <h4 class="card-title">PERFIL</h4>
+
         <form>
           <!-- Trecho -->
           <div class="md-form form-group mt-5">
