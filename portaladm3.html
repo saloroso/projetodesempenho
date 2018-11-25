@@ -100,10 +100,10 @@
 <ul class="list-group">
   
 <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark"> Nome: 
-<span class="badge badge-warning">Substituir5 %</span> </li>
+<span class="badge badge-warning">Substituir5 </span> </li>
   
 <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark"> Ranking:
-<span class="badge badge-warning">Substituir6 %</span> </li>
+<span class="badge badge-warning">Substituir6 </span> </li>
                                  
 <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-warning"> Desempenho:
 <span class="badge badge-dark">Substituir7 %</span> </li>
@@ -130,10 +130,10 @@
 <span class="badge badge-dark">Substituir14 %</span> </li>  
   
 <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-light"> Preenchimento:
-<span class="badge badge-warning">Substituir15 %</span> </li>    
+<span class="badge badge-warning">Substituir15 </span> </li>    
   
   <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-light"> Código do formulário:
-<span class="badge badge-warning">Substituir16 %</span> </li>
+<span class="badge badge-warning">Substituir16 </span> </li>
                                       
 </ul>
         
@@ -242,28 +242,30 @@
               media_geral = lista[i].membros[j].media_geral;   
               respondido2 = lista[i].membros[j].respondido; 
               codigo2 = lista[i].membros[j].codigo; 
+                
               nome_painel2 = String(nome_painel);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir5', nome_painel2);  
               ranking = String(ranking);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir6', ranking); 
-              respondido2 = String(respondido2);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir7', desempenho);  
+              media_auto = media_auto.toFixed(2);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir8', media_auto);   
+              media_comu = media_comu.toFixed(2);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir9', media_comu); 
+              media_disc = media_disc.toFixed(2);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir10', media_disc); 
+              media_flex = media_flex.toFixed(2);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir11', media_flex);   
+              media_foco = media_foco.toFixed(2);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir12', media_foco); 
+              media_rel = media_rel.toFixed(2);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir13', media_rel);   
+              media_geral = media_geral.toFixed(2);  
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir14', media_geral);
+              respondido2 = String(respondido2);  
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir15', respondido2);                 
               codigo2 = String(codigo2);
-              media_auto = media_auto.toFixed(2);
-              media_comu = media_comu.toFixed(2);
-              media_disc = media_disc.toFixed(2);
-              media_flex = media_flex.toFixed(2);
-              media_foco = media_foco.toFixed(2);
-              media_rel = media_rel.toFixed(2);
-              media_ini = media_ini.toFixed(2);
-              media_geral = media_geral.toFixed(2);  
-              media_auto = media_auto.toFixed(2);
-              media_comu = media_comu.toFixed(2);
-              media_disc = media_disc.toFixed(2);
-              media_flex = media_flex.toFixed(2);
-              media_foco = media_foco.toFixed(2);
-              media_rel = media_rel.toFixed(2);
-              media_ini = media_ini.toFixed(2);
-              media_geral = media_geral.toFixed(2);  
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir16', codigo2); 
               alert ("Formulário pegou todos os valores da procura correspondente.");
               }
              }
@@ -400,7 +402,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("9898.");
+    alert ("kjhuiuyu.");
   }
    
   window.onload = Iniciar_Tudo();
