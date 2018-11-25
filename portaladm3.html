@@ -216,7 +216,7 @@
              for (j=0;j<tamanho_equipe;j++){
               if (lista[i].membros[j].nome == pesquisa){
               alert ("O procurado foi encontrado no banco de membros.");
-              var nome_painel;
+              var nome_painel2;
               var ranking;
               var desempenho;
               var media_auto;
@@ -242,8 +242,10 @@
               media_geral = lista[i].membros[j].media_geral;   
               respondido2 = lista[i].membros[j].respondido; 
               codigo2 = lista[i].membros[j].codigo; 
-              nome_painel = String(nome_painel);
+              nome_painel2 = String(nome_painel);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir5', nome_painel2);  
               ranking = String(ranking);
+              document.body.innerHTML = document.body.innerHTML.replace('Substituir6', ranking); 
               respondido2 = String(respondido2);
               codigo2 = String(codigo2);
               media_auto = media_auto.toFixed(2);
@@ -398,7 +400,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("33434.");
+    alert ("9898.");
   }
    
   window.onload = Iniciar_Tudo();
