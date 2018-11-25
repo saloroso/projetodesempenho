@@ -255,6 +255,9 @@
        
        var data = google.visualization.arrayToDataTable(Combined, false);
         
+       var formatter = new google.visualization.BarFormat({width: 120});
+       formatter.format(data, 1); // Apply formatter to second column
+        
        /* Código original do google grafics        
         var data = google.visualization.arrayToDataTable([
        ['Employee Name', 'Salary'],
@@ -268,7 +271,7 @@
       false); // 'false' means that the first row contains labels, not data.      
        */    
         var table = new google.visualization.Table(document.getElementById('table_div'));
-        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+        table.draw(data, {allowHtml: true, showRowNumber: true, width: '100%', height: '100%'});
       }
    
    
@@ -511,7 +514,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("cdcd4423242");
+    alert ("qwqwqeaaaaaaaaa");
   }
    
   window.onload = Iniciar_Tudo();
