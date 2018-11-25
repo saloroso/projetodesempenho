@@ -232,7 +232,24 @@
  // -- FUNCTION QUE CRIA A TABELA --------------------- // 
    google.charts.load('current', {'packages':['table']});
    google.charts.setOnLoadCallback(drawTable);
+   
       function drawTable() {
+        
+      var lista = sessionStorage.getItem("BANCO_ADMS");
+      lista = JSON.parse(lista);  
+      var usuario = sessionStorage.getItem("USUARIO_LOGADO");
+      usuario = JSON.parse(usuario);  
+        
+      var tamanho_banco = lista.length;  
+      for (i=0;i<tamanho_banco;i++){
+         if (lista[i].nome == usuario) {
+           var dados_tabela = lista[i].membros;
+         }
+      }
+             
+       var data = google.visualization.arrayToDataTable(dados_tabela, false);
+        
+       /* Código original do google grafics        
         var data = google.visualization.arrayToDataTable([
        ['Employee Name', 'Salary'],
        ['Mike', {v:22500, f:'22,500'}], // Format as "22,500".
@@ -243,11 +260,7 @@
        ['Fritz', 18500]
       ],
       false); // 'false' means that the first row contains labels, not data.
-        
-        
-        
-        
-        
+       */ 
         
         var table = new google.visualization.Table(document.getElementById('table_div'));
         table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
@@ -493,7 +506,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("BVCVCCV");
+    alert ("gergerge");
   }
    
   window.onload = Iniciar_Tudo();
