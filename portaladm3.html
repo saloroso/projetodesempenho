@@ -59,28 +59,7 @@
  <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir4</span><br>                                                                                                                 
   </form>       
 </div> <!-- Fim_do_Card_Body -->
-</div> <!-- Fim_do_Card-->  
-    
-<div class="card border-dark"> <!-- Inicio_do_Card do Painel-->
-<h4 class="card-header text-warning bg-dark mb-1 lighten-1 text-uppercase font-weight-bold text-left py-1">Substituir1</h4>   
-<div class="card-body text-left">  
-
-   <form class="md-form" style="color: #757575;">
-
-            <label for="textarea">E-mail: </label>
-            <textarea class="form-control md-textarea" id="textarea mb-1" placeholder="" disabled></textarea>
-
-            <label for="textarea2">Membros na equipe: </label>
-            <textarea class="form-control md-textarea" id="textarea2 mb-1" placeholder="" disabled></textarea>
-
-            <label for="textarea3">Formulários preenchidos:</label>
-            <textarea class="form-control md-textarea" id="textarea3 mb-1" placeholder="" disabled></textarea>
-
-     </form>
-  
-</div> <!-- Fim_do_Card_Body -->
-</div> <!-- Fim_do_Card-->   
-    
+</div> <!-- Fim_do_Card-->      
 
  <!-- Inicio_do_Card de Ver Dados Individuais -->    
 <div class="card border-dark">
@@ -372,6 +351,7 @@
                    tamanho_equipe = lista[i].membros.length;
                    alert ("Novo tamanho da equipe é: " + tamanho_equipe);
                    Salvar_Bancodeadms(lista);
+                  location.reload();
                } else {
                    alert ("Membro não cadastrado.");
                }
