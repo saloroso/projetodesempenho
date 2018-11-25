@@ -247,11 +247,13 @@
            var dados_tabela = lista[i].membros;
          }
       }
-           
-       var carros = ["Saab", "Volvo", "BMW"]
-       var carros2 = ["Saab", "Volvo", "BMW"]
        
-       var data = google.visualization.arrayToDataTable(carros, carros2, false);
+       var Combined = new Array();
+       Combined[0] = ['Results', 'First', 'Second'];
+       Combined[1] = ['1', '2', '3'];
+       Combined[2] = ['4', '5', '6'];
+       
+       var data = google.visualization.arrayToDataTable(Combined, false);
         
        /* Código original do google grafics        
         var data = google.visualization.arrayToDataTable([
@@ -263,13 +265,8 @@
        ['Floyd', 92000],
        ['Fritz', 18500]
       ],
-      false); // 'false' means that the first row contains labels, not data.
-      
-      
-      var data = google.visualization.arrayToDataTable(dados_tabela, false);
-      
-       */ 
-        
+      false); // 'false' means that the first row contains labels, not data.      
+       */    
         var table = new google.visualization.Table(document.getElementById('table_div'));
         table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
       }
