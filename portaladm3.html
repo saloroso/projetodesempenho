@@ -199,47 +199,7 @@
    var usuariologado = "";               
    Salvar_Usuariologado(usuariologado);}    
    
-   // -- FUNÇÃO PARA VER RESULTADO INDIVIDUAL --------------------- // 
-   function Ver_Individual(){
-      var lista = sessionStorage.getItem("BANCO_ADMS");
-      lista = JSON.parse(lista);  
-      var usuario = sessionStorage.getItem("USUARIO_LOGADO");
-      usuario = JSON.parse(usuario);  
-      alert ("Usuário é: " + usuario);
-      var pesquisa = document.getElementById("pesquisa_membro").value;
-      alert ("Nome pesquisado é: " + pesquisa);
-      var tamanho_banco = lista.length;  
-      alert ("Quantidade de administradores até agora: " + tamanho_banco);
-
-      for (i=0;i<tamanho_banco;i++){
-         if (lista[i].nome == usuario) {
-             var tamanho_equipe = lista[i].membros.length; 
-             alert ("Quantidade de membros na equipe: " + tamanho_equipe);
-             for (j=0;j<tamanho_equipe;j++){
-               if (lista[i].membros[j].nome == pesquisa){
-                 alert ("Entrou na função para pesquisar search no banco de membros.");
-                 var painel_nome == lista[i].membros[j].nome;
-                 var painel_ranking == lista[i].membros[j].ranking;
-                 var painel_desempenho == lista[i].membros[j].desempenho;
-                 var painel_auto == lista[i].membros[j].media_auto;
-                 var painel_com == lista[i].membros[j].media_comu;
-                 var painel_dis == lista[i].membros[j].media_disc;
-                 var painel_flex == lista[i].membros[j].media_flex;
-                 var painel_foc == lista[i].membros[j].media_foco;
-                 var painel_rel == lista[i].membros[j].media_rel;
-                 var painel_ini == lista[i].membros[j].media_ini;
-                 var painel_geral == lista[i].membros[j].media_geral;
-                 var painel_pree == lista[i].membros[j].respondido;
-                 var painel_codigo == lista[i].membros[j].codigo;
-                 alert ("Formulário pegou todos os valores da procura correspondente.");
-                 return true;
-               }
-             }
-         }
-        alert ("Procurado não encontrado.");
-        return false;
-      }
-   }
+  
    
    // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
     function Criar_membro(nome, codigo, desempenho){
