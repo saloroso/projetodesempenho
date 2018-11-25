@@ -180,6 +180,37 @@
     <!--/Content-->
   </div>
 </div>
+    
+<!-- Modal de Erro -->
+<!-- Central Modal Medium Danger -->
+<div class="modal fade" id="Modal_Erro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Erro</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <p>Campos vazios ou com valores errados.<br>
+            Favor corrigi-los e tentar novamente.</p>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">OK</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Central Modal Medium Danger-->
 
     <!-- FIM DOS MODAIS -->
   
@@ -276,6 +307,11 @@
                 return true;
               }
              }
+         } else {
+           alert ("Usuário não encontrado.");
+           var valor = "#Modal_Erro";
+           document.getElementById("Disparador_Modal").setAttribute("data-target", valor);  
+           return false;
          }
       }
   }
@@ -410,7 +446,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("hyuyu.");
+    alert ("7899");
   }
    
   window.onload = Iniciar_Tudo();
