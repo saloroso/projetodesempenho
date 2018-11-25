@@ -201,14 +201,11 @@
    
    // -- FUNÇÃO PARA VER RESULTADO INDIVIDUAL --------------------- // 
    function Ver_Individual(){
-     
       var lista = sessionStorage.getItem("BANCO_ADMS");
       lista = JSON.parse(lista);  
       var usuario = sessionStorage.getItem("USUARIO_LOGADO");
       usuario = JSON.parse(usuario);  
-     
       alert ("Usuário é: " + usuario);
-     
       var pesquisa = document.getElementById("pesquisa_membro").value;
       alert ("Nome pesquisado é: " + pesquisa);
       var tamanho_banco = lista.length;  
@@ -233,37 +230,16 @@
                  var painel_ini == lista[i].membros[j].media_ini;
                  var painel_geral == lista[i].membros[j].media_geral;
                  var painel_pree == lista[i].membros[j].respondido;
-                 var painel_código == lista[i].membros[j].codigo;
+                 var painel_codigo == lista[i].membros[j].codigo;
                  alert ("Formulário pegou todos os valores da procura correspondente.");
-                 
+                 return true;
                }
              }
          }
         alert ("Procurado não encontrado.");
         return false;
       }
-
-     
-
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-   } //Fim da Função para buscar resultado individual.
+   }
    
    // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
     function Criar_membro(nome, codigo, desempenho){
@@ -377,7 +353,7 @@
         if (listadeadms[i].nome==usuariologado){
           tamanho_equipe = listadeadms[i].membros.length;
           for (j=0;j<tamanho_equipe;j++){
-            if (listadeadms[i].membros[j].respondido=="Respondido")
+            if (listadeadms[i].membros[j].respondido == "Respondido")
             {
               preenchidos_temp = preenchidos_temp + 1;
             }
