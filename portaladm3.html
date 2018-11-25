@@ -306,7 +306,8 @@
                   var tamanho4 = lista[i].membros.length; 
                   for (j=0;j<tamanho4;j++){
                       if ((codigo == "") || (nome == "") || (desempenho<0) || (desempenho>100) ||
-                          (lista[i].membros[j].codigo == codigo) || (lista[i].membros[j].nome == nome)){
+                          (lista[i].membros[j].codigo == codigo) || (lista[i].membros[j].nome == nome)
+                         || (typeof desempenho != "number")){
                       alert ("Entrei na função para ver se o código está errado e ele está vazio ou errado.");
                       return false;
                       }
@@ -398,7 +399,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("aasasas.");
+    alert ("xxxxxs.");
   }
    
   window.onload = Iniciar_Tudo();
