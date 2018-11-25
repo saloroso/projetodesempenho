@@ -227,6 +227,11 @@
    document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor);  
    }
    
+   function Modal_certa(){
+   var valor = "#Modal2";
+   document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor);  
+   }
+   
    function Salvar_Bancodeadms(listadeadms){
    sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms));
    return true;}       
@@ -303,6 +308,7 @@
               document.body.innerHTML = document.body.innerHTML.replace('Substituir16', codigo2); 
               media_ini = media_ini.toFixed(2);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir18', media_ini); 
+              Modal_certa();
               return true;
               } 
              }
@@ -427,7 +433,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("nnnnnnnnnnnn");
+    alert ("nkijuuyg");
   }
    
   window.onload = Iniciar_Tudo();
