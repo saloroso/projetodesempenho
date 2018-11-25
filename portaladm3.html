@@ -124,16 +124,62 @@
    
    
   function Iniciar_Tudo(){
-    alert ("Loading Processado 78.");
+    
+    // Recebendo banco de dados armazenado em session.
+          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
+          listadeadms_temp = JSON.parse(listadeadms_temp); 
+          if (listadeadms_temp == null){ 
+          listadeadms_temp = new Array();
+          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
+          var listadeadms = listadeadms_temp;      
+      
+          // Recebendo usuario armazenado em Session.      
+          var usuariologado_temp = sessionStorage.getItem("USUARIO_LOGADO"); 
+          usuariologado_temp = JSON.parse(usuariologado_temp); 
+          if (usuariologado_temp == null){ 
+          usuariologado_temp = "";
+          sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
+          var usuariologado = usuariologado_temp;
+
+      // Variáveis que preencherão o painel.
+      var nome_painel = String(usuariologado);
+      var tamanho_banco = listadeadms.length; 
+      var tamanho_equipe = 0;
+      var email_temp = "";
+      var preenchidos_temp = 0;
+      
+      // Passando valor do e-mail temporário para painel.
+      for (r=0;r<tamanho_banco;r++){
+      if (listadeadms[r].nome==usuariologado){
+      email_temp = listadeadms[r].email;}}
+      
+      // Calculando tamanho da equipe e quantidade de formulários preenchidos do líder.
+      for (i=0;i<tamanho_banco;i++){
+        if (listadeadms[i].nome==usuariologado){
+          tamanho_equipe = listadeadms[i].membros.length;
+          for (j=0;j<tamanho_equipe;j++){
+            if (listadeadms[i].membros[j].respondido==1)
+            {
+              preenchidos_temp = preenchidos_temp + 1;
+            }
+          }
+        }
+      }
+      
+    // Inserindo valores no painel.
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir1', nome_painel);
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir2', email_temp);
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
+      document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
+
+    alert ("Loading Processado 69.");
   }
    
   window.onload = Iniciar_Tudo();
   
 
 </script>
-  
 
-  
 </body>
   
 </html>
