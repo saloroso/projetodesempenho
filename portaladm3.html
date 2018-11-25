@@ -246,6 +246,14 @@
               ranking = String(ranking);
               respondido2 = String(respondido2);
               codigo2 = String(codigo2);
+              media_auto = media_auto.toFixed(2);
+              media_comu = media_comu.toFixed(2);
+              media_disc = media_disc.toFixed(2);
+              media_flex = media_flex.toFixed(2);
+              media_foco = media_foco.toFixed(2);
+              media_rel = media_rel.toFixed(2);
+              media_ini = media_ini.toFixed(2);
+              media_geral = media_geral.toFixed(2);  
               alert ("Formulário pegou todos os valores da procura correspondente.");
               }
              }
@@ -378,7 +386,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("oppl.");
+    alert ("loko.");
   }
    
   window.onload = Iniciar_Tudo();
