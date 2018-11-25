@@ -218,6 +218,7 @@
 <script type="text/javascript" src="js/popper.min.js"></script> <!-- Bootstrap tooltips -->  
 <script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script> <!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Provindo do Google Graphics -->
 
  <script type="text/javascript">  
    
@@ -297,7 +298,9 @@
               document.body.innerHTML = document.body.innerHTML.replace('Substituir16', codigo2); 
               media_ini = media_ini.toFixed(2);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir18', media_ini); 
-                return true;
+              var valor = "#Modal2";
+              document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor);  
+              return true;
               } else {
                  var valor = "#Modal_Erro";
                  document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor);  
@@ -424,7 +427,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("fffff");
+    alert ("xxxxxx");
   }
    
   window.onload = Iniciar_Tudo();
