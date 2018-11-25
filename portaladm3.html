@@ -98,10 +98,11 @@
       </div>
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-warning" onclick="Cadastrar_Membro()" data-dismiss="Modal1">Registrarfalho</a>
-        <a type="button" class="btn btn-success" onclick="Cadastrar_Membro()" data-dismiss="modal">Registrar</a>
+        <a type="button" class="btn btn-warning" onclick="Cadastrar_Membro()" data-dismiss="modal">Registrar</a>
         <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
-        <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">OK</a>
+        <button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
+ data-target="#Modal1" data-dismiss="modal"> CADASTRAR NOVO COLABORADOR
+</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->    
       </div>
     </div>
     <!--/Content-->
@@ -253,7 +254,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado 777.");
+    alert ("Loading Processado 887.");
   }
    
   window.onload = Iniciar_Tudo();
