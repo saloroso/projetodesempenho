@@ -205,6 +205,10 @@
       var usuario = sessionStorage.getItem("USUARIO_LOGADO");
       usuario = JSON.parse(usuario);  
       alert ("Usuário é: " + usuario);
+      var pesquisa = document.getElementById("pesquisa_membro").value;
+      alert ("Nome pesquisado é: " + pesquisa);
+      var tamanho_banco = lista.length;  
+      alert ("Quantidade de administradores até agora: " + tamanho_banco);
   }
    
    // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
@@ -333,7 +337,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado 23.");
+    alert ("Loading Processado 122.");
   }
    
   window.onload = Iniciar_Tudo();
