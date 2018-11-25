@@ -230,7 +230,9 @@
               var respondido;
               var codigo;
               nome_painel = lista[i].membros[j].nome;
-              alert ("Nome encontrado é: " + nome_painel);
+              ranking = lista[i].membros[j].ranking;
+              desempenho = lista[i].membros[j].desempenho;           
+              alert ("Nome encontrado é: " + desempenho);
               alert ("Formulário pegou todos os valores da procura correspondente.");
               }
              }
@@ -363,7 +365,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("kop.");
+    alert ("1222.");
   }
    
   window.onload = Iniciar_Tudo();
