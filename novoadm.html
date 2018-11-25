@@ -53,7 +53,7 @@
 
 <!-- Disparador_do_Modal -->
 <button type="button" id="Disparador_Modal" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" 
-        data-target="#centralModalDanger" onclick="Cadastrar_Adm()">
+        onclick="Cadastrar_Adm()" data-target="#centralModalDanger">
   ACESSAR
 </button> <!-- Fim_do_Disparador_do_Modal -->
 
@@ -135,8 +135,57 @@
   <!-- Script da Página -->  
   <script type="text/javascript"> 
   
+  // -- SCRIPT PARA SALVAR ATUALIZAÇÕES DO BANCO DE ADMS NO SESSION STORAGE --------------------- // 
+    function Salvar_Bancodeadms(listadeadms){
+          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms));
+          return true;}            
+    
+  // -- FUNÇÃO PARA CRIAR NOVO ADMINISTRADOR/LÍDER, SEJA ELE MASTER OU NÃO --------------------- // 
+   function Criar_adm(nome,email,senha){ 
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.membros = new Array();
+    }
+    
+   // -- VERIFICAR SE O ADM JÁ ESTÁ CADASTRADO NO BANCO DE DADOS --------------------- // 
+     function Verifica_Adm(nome1,email1,senha1,lista){ 
+          alert ("Entrei na função verificar dados de cadastro do adm.");
+          var lista2 = lista;     
+          var tamanho6 = lista2.length;  
+          alert ("Quantidade de adms cadastrados: " + tamanho6);
+          for (r=0;r<tamanho6;r++){
+                if ((nome1=="") || (email1=="") || (senha1=="")){      
+                      return false;
+                } else if ((lista2[r].nome==nome1) || (lista2[r].email==email1)){
+                      return false;}
+          }            
+            return true;
+      }
+    
+    // -- FUNÇÃO PARA CADASTRAR ADM NO BANCO DE DADOS --------------------- // 
+    function Cadastrar_Adm(){   
+          alert ("Entrei na função cadastrar adm.");
+          var lista = sessionStorage.getItem("BANCO_ADMS");
+          lista = JSON.parse(lista);  
+          var nome1 = document.getElementById("Nome").value;
+          var email1 = document.getElementById("E-mail").value;
+          var senha1 = document.getElementById("Senha").value;    
+          alert ("Nome: " + nome1);
+          alert ("Email: " + email1);
+          alert ("Senha: " + senha1);
+          var verificar = Verifica_Adm(nome1,email1,senha1,lista);
+          if (verificar==true){
+               var novo_user = new Criar_adm(nome1,email1,senha1);
+               lista.push(novo_user);
+               Salvar_Bancodeadms(lista);  
+               var valor = "#basicExampleModal3";
+               document.getElementById("Disparador_Modal").setAttribute("data-target", valor);  
+          } 
+    }
+    
   function Iniciar_tudo(){
-   alert ("Loading Processado 1.");}
+   alert ("Loading Processado 2.");}
   
       window.onload = Iniciar_tudo();
   
