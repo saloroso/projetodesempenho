@@ -57,8 +57,7 @@
            <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir3</span><br>
            <span class="label label-warning mb-3 font-weight-bold">Formulários preenchidos: </span> 
            <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir4</span><br>                                                                                                                 
-        </form>
-                                                          
+        </form>                                                  
 </div> <!-- Fim_do_Card_Body -->
 </div> <!-- Fim_do_Card-->        
                                                                                                                   
@@ -96,44 +95,8 @@
     </div>
     <!--/.Content-->
   </div>
-</div>
-<!-- Fim do Modal de Cadastrar Novo Membro -->                                                                   
+</div> <!-- Fim do Modal de Cadastrar Novo Membro -->                                                                   
                                                                                           
-                                                                                          
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>  
-  <script type="text/javascript" src="js/popper.min.js"></script> <!-- Bootstrap tooltips -->  
-  <script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script> <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/jsproprio.min.js"> </script> <!-- Script Próprio -->  
-    
-  <script type="text/javascript"> 
-    
-    function Iniciar_tudo(){
-          
-          // Recebendo banco de dados armazenado em session.
-          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
-          listadeadms_temp = JSON.parse(listadeadms_temp); 
-          if (listadeadms_temp == null){ 
-          listadeadms_temp = new Array();
-          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          var listadeadms = listadeadms_temp;      
-      
-          // Recebendo usuario armazenado em Session.      
-          var usuariologado_temp = sessionStorage.getItem("USUARIO_LOGADO"); 
-          usuariologado_temp = JSON.parse(usuariologado_temp); 
-          if (usuariologado_temp == null){ 
-          usuariologado_temp = "";
-          sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
-          var usuariologado = usuariologado_temp;
-
-      alert ("Loading Processado 0.");
-
-} // Encerramento da Função Iniciar_Tudo.
-    
-      window.onload = Iniciar_tudo();
-    
-  </script>
-  
 </body>
   
 </html>
