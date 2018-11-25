@@ -221,9 +221,9 @@
 
  <script type="text/javascript">  
      
-   function Modal_falhou(){
-        $('#Modal_errada').modal('show');
-     });
+   $(window).load(function(){
+         $('#Modal_falhou').modal('show');
+      });
    
    function Salvar_Bancodeadms(listadeadms){
    sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms));
@@ -313,7 +313,6 @@
              }
          }
       }
-    Modal_falhou();
   }
    
    // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
@@ -447,7 +446,6 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
     alert ("hyuyu.");
-    Modal_falhou();
   }
    
   window.onload = Iniciar_Tudo();
