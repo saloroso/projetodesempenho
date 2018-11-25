@@ -246,7 +246,6 @@
              var tamanho_equipe = lista[i].membros.length; 
              for (j=0;j<tamanho_equipe;j++){
               if (lista[i].membros[j].nome == pesquisa){
-              alert ("Entrei na função");
               var nome_painel2;
               var ranking;
               var desempenho;
@@ -300,14 +299,7 @@
               media_ini = media_ini.toFixed(2);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir18', media_ini); 
               var valor2 = "#Modal2";
-              alert ("Valor que será repassado para modal: " + valor2);
-              document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor2);  
-              return true;
-              } else {
-                 var valor = "#Modal_Erro";
-                 document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor);  
-                 return true;
-              }
+              } 
              }
          }
       }
