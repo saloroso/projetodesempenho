@@ -213,6 +213,11 @@
          if (lista[i].nome == usuario) {
              var tamanho_equipe = lista[i].membros.length; 
              alert ("Quantidade de membros na equipe: " + tamanho_equipe);
+             for (j=0;j<tamanho_equipe;j++){
+              if (lista[i].membros[j].nome == pesquisa){
+              alert ("O procurado foi encontrado no banco de membros.");
+              }
+             }
          }
       }
   }
@@ -284,7 +289,6 @@
                 lista[i].membros.push(novo_membro);
                    tamanho_equipe = lista[i].membros.length;
                    alert ("Novo tamanho da equipe é: " + tamanho_equipe);
-                   document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
                    Salvar_Bancodeadms(lista);
                } else {
                    alert ("Membro não cadastrado.");
@@ -343,7 +347,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado re.");
+    alert ("Loading Processado wq.");
   }
    
   window.onload = Iniciar_Tudo();
