@@ -56,13 +56,13 @@
 
 <!-- Disparador_do_Modal -->
 <button type="button" id="Disparador_Modal" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" 
-        data-target="#centralModalDanger" onclick="Logar_Adm(listadeadms)">
+        data-target="#Modal_Erro" onclick="Logar_Adm()">
   ACESSAR
 </button> <!-- Fim_do_Disparador_do_Modal -->
 
 <!-- Modal de Erro -->
 <!-- Central Modal Medium Danger -->
-<div class="modal fade" id="centralModalDanger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="Modal_Erro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-notify modal-danger" role="document">
     <!--Content-->
@@ -94,7 +94,7 @@
 
   <!-- Modal de Acerto -->
 <!-- Central Modal Medium Success -->
-<div class="modal fade" id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="Modal_Acerto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-notify modal-success" role="document">
     <!--Content-->
@@ -136,16 +136,34 @@
   <script type="text/javascript" src="js/jsproprio.min.js"> </script> <!-- Script Próprio -->  
     
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
-    listadeadms = new Array(); // Global da própria página.
-    function Pegarlistadeadms(){
-          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
-          listadeadms_temp = JSON.parse(listadeadms_temp); 
-          if (listadeadms_temp == null){ 
-          listadeadms_temp = new Array();
-          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          listadeadms = listadeadms_temp;
-    }
-  window.onload = Pegarlistadeadms();
+    
+    // -- FUNÇÃO PARA LOGAR NO BANCO DE DADOS --------------------- // 
+   
+    function Salvar_Usuariologado(usuariologado){
+          sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado));
+          return true;}        
+    
+    function Logar_Adm(){ 
+        var lista = sessionStorage.getItem("BANCO_ADMS");
+        lista = JSON.parse(lista);   
+        var emailadm = document.getElementById("E-mail").value;
+        var senhaadm = document.getElementById("Senha").value;        
+        var tamanho = lista.length;
+        for (i=0;i<tamanho;i++){            
+            if ((lista[i].email==emailadm) && (lista[i].senha==senhaadm)) {
+                var usuariologado = lista[i].nome;               
+                Salvar_Usuariologado(usuariologado);                
+                var valor = "#Modal_Acerto";
+                document.getElementById("Disparador_Modal").setAttribute("data-target", valor);   
+                return true;
+            } 
+        }
+    } 
+
+     function Iniciar_tudo(){
+   alert ("Loading Processado 0.");}
+  
+      window.onload = Iniciar_tudo();
     
   </script>
   
