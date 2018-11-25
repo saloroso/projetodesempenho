@@ -174,9 +174,9 @@
         alert ("Entrei na função cadastrar membro.");
         var lista = sessionStorage.getItem("BANCO_ADMS");
         lista = JSON.parse(lista);  
-        var nome2 = document.getElementById("nome2").value;
-        var desempenho2 = document.getElementById("desempenho2").value;
-        var codigo2 = document.getElementById("codigo2").value;  
+        var nome2 = document.getElementById("nome").value;
+        var desempenho2 = document.getElementById("desempenho").value;
+        var codigo2 = document.getElementById("codigo").value;  
         alert ("Nome: " + nome2);
         alert ("Desempenho: " + desempenho2);
         alert ("Código: " + codigo2);
@@ -251,7 +251,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado 3700.");
+    alert ("Loading Processado 3756.");
   }
    
   window.onload = Iniciar_Tudo();
