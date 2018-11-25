@@ -231,8 +231,9 @@
               var codigo;
               nome_painel = lista[i].membros[j].nome;
               ranking = lista[i].membros[j].ranking;
-              desempenho = lista[i].membros[j].desempenho;           
-              alert ("Nome encontrado é: " + desempenho);
+              desempenho = lista[i].membros[j].desempenho;
+              media_auto = lista[i].membros[j].media_auto;    
+              alert ("Nome encontrado é: " + media_auto);
               alert ("Formulário pegou todos os valores da procura correspondente.");
               }
              }
@@ -365,7 +366,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("1222.");
+    alert ("54.");
   }
    
   window.onload = Iniciar_Tudo();
