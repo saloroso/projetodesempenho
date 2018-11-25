@@ -238,18 +238,13 @@
       lista = JSON.parse(lista);  
       var usuario = sessionStorage.getItem("USUARIO_LOGADO");
       usuario = JSON.parse(usuario);  
-      alert ("Usuário é: " + usuario);
       var pesquisa = document.getElementById("pesquisa_membro").value;
-      alert ("Nome pesquisado é: " + pesquisa);
       var tamanho_banco = lista.length;  
-      alert ("Quantidade de administradores até agora: " + tamanho_banco);
       for (i=0;i<tamanho_banco;i++){
          if (lista[i].nome == usuario) {
              var tamanho_equipe = lista[i].membros.length; 
-             alert ("Quantidade de membros na equipe: " + tamanho_equipe);
              for (j=0;j<tamanho_equipe;j++){
               if (lista[i].membros[j].nome == pesquisa){
-              alert ("O procurado foi encontrado no banco de membros.");
               var nome_painel2;
               var ranking;
               var desempenho;
@@ -275,8 +270,7 @@
               media_ini = lista[i].membros[j].media_ini; 
               media_geral = lista[i].membros[j].media_geral;   
               respondido2 = lista[i].membros[j].respondido; 
-              codigo2 = lista[i].membros[j].codigo; 
-                
+              codigo2 = lista[i].membros[j].codigo;         
               nome_painel2 = String(nome_painel2);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir5', nome_painel2);  
               ranking = String(ranking);
@@ -303,10 +297,8 @@
               document.body.innerHTML = document.body.innerHTML.replace('Substituir16', codigo2); 
               media_ini = media_ini.toFixed(2);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir18', media_ini); 
-              alert ("Formulário pegou todos os valores da procura correspondente.");
                 return true;
               } else {
-                 alert ("Usuário não encontrado.");
                  var valor = "#Modal_Erro";
                  document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor);  
                  return false;
@@ -331,7 +323,6 @@
           this.media_geral = 0;
           this.respondido = "Não respondido"; 
           this.codigo = codigo;
-       alert ("Respondente criado com sucesso.");
     }
    
    // -- VERIFICAR SE O MEMBRO JÁ ESTA NA LISTA DE MEMBROS DO ADMINISTRADOR --------------------- // 
@@ -339,14 +330,11 @@
           var nome = nome2;
           var codigo = codigo2;
           var desempenho = desempenho2;
-          alert ("Entrei na função verificar membro.");
           var lista = sessionStorage.getItem("BANCO_ADMS");
           lista = JSON.parse(lista);  
           var usuario = sessionStorage.getItem("USUARIO_LOGADO");
           usuario = JSON.parse(usuario);  
           var tamanho = lista.length;  
-          alert ("Quantidade de administradores até agora: " + tamanho);
-          alert ("Usuário é: " + usuario);
           for (i=0;i<tamanho;i++){
               if (lista[i].nome == usuario) {
                   var tamanho4 = lista[i].membros.length; 
@@ -354,31 +342,24 @@
                       if ((codigo == "") || (nome == "") || (desempenho<0) || (desempenho>100) ||
                           (lista[i].membros[j].codigo == codigo) || (lista[i].membros[j].nome == nome)
                          || (isNaN(desempenho) == true)){
-                      alert ("Entrei na função para ver se o código está errado e ele está vazio ou errado.");
                       return false;
                       }
                   }
               }
-          alert ("Codigo não existe e pode cadastrar.");
           return true;
       }
    }
    
       // FUNÇÃO CHAMADA PARA CADASTRAR MEMBRO ---------------------- //
     function Cadastrar_Membro(){
-        alert ("Entrei na função cadastrar membro.");
         var lista = sessionStorage.getItem("BANCO_ADMS");
         lista = JSON.parse(lista);  
         var nome2 = document.getElementById("nome").value;
         var desempenho2 = document.getElementById("desempenho").value;
         var codigo2 = document.getElementById("codigo").value; 
-        desempenho2 = parseInt(desempenho2,10);
-        alert ("Nome: " + nome2);
-        alert ("Desempenho: " + desempenho2);
-        alert ("Código: " + codigo2);
+        desempenho2 = parseInt(desempenho2,10);       
         var verificar2 = Verificar_Membro(nome2, codigo2, desempenho2);
         if (verificar2==true){
-           alert ("Entrei no if de criar membro.");
            var novo_membro = new Criar_membro(nome2, codigo2, desempenho2);
            var tamanho_banco = listadeadms.length; 
            var tamanho_equipe = 0;
@@ -386,12 +367,9 @@
                if (lista[i].nome==usuariologado){
                 lista[i].membros.push(novo_membro);
                    tamanho_equipe = lista[i].membros.length;
-                   alert ("Novo tamanho da equipe é: " + tamanho_equipe);
                    Salvar_Bancodeadms(lista);
                   location.reload();
-               } else {
-                   alert ("Membro não cadastrado.");
-               }
+               } 
            }
         }
     }
