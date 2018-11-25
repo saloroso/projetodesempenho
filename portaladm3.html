@@ -243,6 +243,7 @@
       var tamanho_banco = lista.length;  
       for (i=0;i<tamanho_banco;i++){
          if (lista[i].nome == usuario) {
+           alert ("Entrei na função");
              var tamanho_equipe = lista[i].membros.length; 
              for (j=0;j<tamanho_equipe;j++){
               if (lista[i].membros[j].nome == pesquisa){
@@ -298,8 +299,9 @@
               document.body.innerHTML = document.body.innerHTML.replace('Substituir16', codigo2); 
               media_ini = media_ini.toFixed(2);
               document.body.innerHTML = document.body.innerHTML.replace('Substituir18', media_ini); 
-              var valor = "#Modal2";
-              document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor);  
+              var valor2 = "#Modal2";
+              alert ("Valor que será repassado para modal: " + valor2);
+              document.getElementById("Disparador_Modal_Two").setAttribute("data-target", valor2);  
               return true;
               } else {
                  var valor = "#Modal_Erro";
@@ -427,7 +429,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("xxxxxx");
+    alert ("gtgfdgdrrgdthd");
   }
    
   window.onload = Iniciar_Tudo();
