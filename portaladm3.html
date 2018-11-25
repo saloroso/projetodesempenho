@@ -289,9 +289,10 @@
     }
    
    // -- VERIFICAR SE O MEMBRO JÁ ESTA NA LISTA DE MEMBROS DO ADMINISTRADOR --------------------- // 
-      function Verificar_Membro(nome2, codigo2){
+      function Verificar_Membro(nome2, codigo2, desempenho2){
           var nome = nome2;
           var codigo = codigo2;
+          var desempenho = desempenho2;
           alert ("Entrei na função verificar membro.");
           var lista = sessionStorage.getItem("BANCO_ADMS");
           lista = JSON.parse(lista);  
@@ -304,7 +305,8 @@
               if (lista[i].nome == usuario) {
                   var tamanho4 = lista[i].membros.length; 
                   for (j=0;j<tamanho4;j++){
-                      if ((codigo == "") || (nome == "") || (lista[i].membros[j].codigo == codigo) || (lista[i].membros[j].nome == nome)){
+                      if ((codigo == "") || (nome == "") || (desempenho<0) || (desempenho>100) ||
+                          (lista[i].membros[j].codigo == codigo) || (lista[i].membros[j].nome == nome)){
                       alert ("Entrei na função para ver se o código está errado e ele está vazio ou errado.");
                       return false;
                       }
@@ -322,11 +324,12 @@
         lista = JSON.parse(lista);  
         var nome2 = document.getElementById("nome").value;
         var desempenho2 = document.getElementById("desempenho").value;
-        var codigo2 = document.getElementById("codigo").value;  
+        var codigo2 = document.getElementById("codigo").value; 
+        desempenho2 = parseInt(desempenho2,10);
         alert ("Nome: " + nome2);
         alert ("Desempenho: " + desempenho2);
         alert ("Código: " + codigo2);
-        var verificar2 = Verificar_Membro(nome2, codigo2);
+        var verificar2 = Verificar_Membro(nome2, codigo2, desempenho2);
         if (verificar2==true){
            alert ("Entrei no if de criar membro.");
            var novo_membro = new Criar_membro(nome2, codigo2, desempenho2);
@@ -395,7 +398,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("lpyt.");
+    alert ("aasasas.");
   }
    
   window.onload = Iniciar_Tudo();
