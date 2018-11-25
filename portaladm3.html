@@ -216,6 +216,20 @@
              for (j=0;j<tamanho_equipe;j++){
               if (lista[i].membros[j].nome == pesquisa){
               alert ("O procurado foi encontrado no banco de membros.");
+                 var painel_nome == lista[i].membros[j].nome;
+                 var painel_ranking == lista[i].membros[j].ranking;
+                 var painel_desempenho == lista[i].membros[j].desempenho;
+                 var painel_auto == lista[i].membros[j].media_auto;
+                 var painel_com == lista[i].membros[j].media_comu;
+                 var painel_dis == lista[i].membros[j].media_disc;
+                 var painel_flex == lista[i].membros[j].media_flex;
+                 var painel_foc == lista[i].membros[j].media_foco;
+                 var painel_rel == lista[i].membros[j].media_rel;
+                 var painel_ini == lista[i].membros[j].media_ini;
+                 var painel_geral == lista[i].membros[j].media_geral;
+                 var painel_pree == lista[i].membros[j].respondido;
+                 var painel_codigo == lista[i].membros[j].codigo;
+                alert ("Formulário pegou todos os valores da procura correspondente.");
               }
              }
          }
@@ -225,7 +239,7 @@
    // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
     function Criar_membro(nome, codigo, desempenho){
           this.nome = nome;
-          this.codigo = codigo;
+          this.ranking = "Indefinido"; 
           this.desempenho = desempenho;
           this.media_auto = 0;
           this.media_comu = 0;
@@ -236,7 +250,7 @@
           this.media_ini = 0;
           this.media_geral = 0;
           this.respondido = "Não respondido"; 
-          this.ranking = "Indefinido"; 
+          this.codigo = codigo;
        alert ("Respondente criado com sucesso.");
     }
    
@@ -347,7 +361,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado wq.");
+    alert ("Loading Processado çop.");
   }
    
   window.onload = Iniciar_Tudo();
