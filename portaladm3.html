@@ -246,7 +246,7 @@
                    document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
                    Salvar_Bancodeadms(lista);
                    alert ("Membro cadastrado.");
-                   window.onload('Modal_Acerto').modal('show');
+                   document.getElementById("Modal_Acerto").modal('show');
                } else {
                    alert ("Membro não cadastrado.");
                }
@@ -304,7 +304,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado 2222.");
+    alert ("Loading Processado ty.");
   }
    
   window.onload = Iniciar_Tudo();
