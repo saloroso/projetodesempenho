@@ -88,7 +88,7 @@
       <div class="modal-footer justify-content-center">
         <a type="button" class="btn btn-warning" onclick="Cadastrar_Membro()" data-dismiss="modal">Registrareeee</a>
         
-        <button type="button" id="Disparador_Modal" class="btn btn-warning border-dark" onclick="Cadastrar_Membro()" data-toggle="modal" 
+        <button type="button" id="Disparador_Modal" class="btn peach-gradient" onclick="Cadastrar_Membro()" data-toggle="modal" 
  data-target="#Modal_Erro" data-dismiss="modal"> REGISTRAR
 </button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
         <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
@@ -266,6 +266,8 @@
                    document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
                    Salvar_Bancodeadms(lista);
                    alert ("Membro cadastrado.");
+                   var valor = "#Modal_Acerto";
+                   document.getElementById("Disparador_Modal").setAttribute("data-target", valor); 
                } else {
                    alert ("Membro não cadastrado.");
                }
@@ -323,7 +325,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado 22121.");
+    alert ("Loading Processado 554.");
   }
    
   window.onload = Iniciar_Tudo();
