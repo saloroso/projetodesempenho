@@ -126,8 +126,7 @@
    
    function Executar_Logout(){
    var usuariologado = "";               
-   Salvar_Usuariologado(usuariologado);  
-   }      
+   Salvar_Usuariologado(usuariologado);}      
    
    // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
     function Criar_membro(nome, codigo, desempenho){
@@ -171,6 +170,7 @@
           alert ("Codigo não existe e pode cadastrar.");
           return true;
       }
+   }
    
       // FUNÇÃO CHAMADA PARA CADASTRAR MEMBRO ---------------------- //
     function Cadastrar_Membro(){
@@ -259,7 +259,6 @@
    
   window.onload = Iniciar_Tudo();
   
-
 </script>
 
 </body>
