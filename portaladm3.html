@@ -206,13 +206,11 @@
       lista = JSON.parse(lista);  
       var usuario = sessionStorage.getItem("USUARIO_LOGADO");
       usuario = JSON.parse(usuario);  
-
      
       alert ("Usuário é: " + usuario);
      
       var pesquisa = document.getElementById("pesquisa_membro").value;
       alert ("Nome pesquisado é: " + pesquisa);
-     
       var tamanho_banco = lista.length;  
       alert ("Quantidade de administradores até agora: " + tamanho_banco);
 
@@ -222,9 +220,27 @@
              alert ("Quantidade de membros na equipe: " + tamanho_equipe);
              for (j=0;j<tamanho_equipe;j++){
                if (lista[i].membros[j].nome == pesquisa){
+                 alert ("Entrou na função para pesquisar search no banco de membros.");
+                 var painel_nome == lista[i].membros[j].nome;
+                 var painel_ranking == lista[i].membros[j].ranking;
+                 var painel_desempenho == lista[i].membros[j].desempenho;
+                 var painel_auto == lista[i].membros[j].media_auto;
+                 var painel_com == lista[i].membros[j].media_comu;
+                 var painel_dis == lista[i].membros[j].media_disc;
+                 var painel_flex == lista[i].membros[j].media_flex;
+                 var painel_foc == lista[i].membros[j].media_foco;
+                 var painel_rel == lista[i].membros[j].media_rel;
+                 var painel_ini == lista[i].membros[j].media_ini;
+                 var painel_geral == lista[i].membros[j].media_geral;
+                 var painel_pree == lista[i].membros[j].respondido;
+                 var painel_código == lista[i].membros[j].codigo;
+                 alert ("Formulário pegou todos os valores da procura correspondente.");
+                 
                }
              }
          }
+        alert ("Procurado não encontrado.");
+        return false;
       }
 
      
@@ -256,12 +272,13 @@
           this.desempenho = desempenho;
           this.media_auto = 0;
           this.media_comu = 0;
+          this.media_disc = 0;
           this.media_flex = 0;
           this.media_foco = 0;
           this.media_rel = 0;
           this.media_ini = 0;
           this.media_geral = 0;
-          this.respondido = 0; 
+          this.respondido = "Não respondido"; 
           this.ranking = "Indefinido"; 
        alert ("Respondente criado com sucesso.");
     }
@@ -360,7 +377,7 @@
         if (listadeadms[i].nome==usuariologado){
           tamanho_equipe = listadeadms[i].membros.length;
           for (j=0;j<tamanho_equipe;j++){
-            if (listadeadms[i].membros[j].respondido==1)
+            if (listadeadms[i].membros[j].respondido=="Respondido")
             {
               preenchidos_temp = preenchidos_temp + 1;
             }
@@ -374,7 +391,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado 21221.");
+    alert ("Loading Processado 5644.");
   }
    
   window.onload = Iniciar_Tudo();
