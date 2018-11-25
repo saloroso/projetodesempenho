@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Arredonda Minha Nota</title>  <!-- Font Awesome -->
   <link rel = "icon" type = "image/png" href = "img/prayer.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">  <!-- Material Design Bootstrap -->
   <link href="css/mdb.min.css" rel="stylesheet">  <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
@@ -31,7 +31,8 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
-  <a class="btn btn-outline-warning btn-sm" onclick="Salvar_Logout2()" href="https://saloroso.github.io/projetodesempenho/loginadm" role="button">LOGOUT</a>
+  <a class="btn btn-outline-warning btn-sm" onclick="Salvar_Logout2()" 
+     href="https://saloroso.github.io/projetodesempenho/loginadm" role="button">LOGOUT</a>
   </nav> <!-- Fim_da_Barra_de_Navegação-->
  </header>  
   
@@ -101,6 +102,23 @@
 <script type="text/javascript" src="js/popper.min.js"></script> <!-- Bootstrap tooltips -->  
 <script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script> <!-- MDB core JavaScript -->
+                                           
+<script type="text/javascript"> 
+       
+       function Salvar_Usuariologado(usuariologado){
+          sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado));
+          return true;}                            
+                              
+                              
+      function Salvar_Logout(){
+        var usuariologado = "";               
+        Salvar_Usuariologado(usuariologado);  
+    }                             
+
+                   
+</script>    
+
+                   
                                                                                           
 </body>
   
