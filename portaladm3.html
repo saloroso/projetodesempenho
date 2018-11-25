@@ -51,8 +51,53 @@
   
     
     
-    
-    
+    <div class="card border-dark"> <!-- Inicio_do_Card do Painel-->
+      <h4 class="card-header text-warning bg-dark mb-1 lighten-1 text-uppercase font-weight-bold text-left py-1">Substituir1</h4>   
+      <div class="card-body text-left">  
+       <form>
+           <span class="label label-warning mb-3 font-weight-bold">E-mail: </span> 
+           <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir2</span><br> 
+           <span class="label label-warning mb-3 font-weight-bold">Membros na equipe: </span>
+           <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir3</span><br>
+           <span class="label label-warning mb-3 font-weight-bold">Formulários preenchidos: </span> 
+           <span class="label label-warning mb-3 text-warning font-weight-bold">Substituir4</span><br>                                                                                                                 
+        </form>       
+</div> <!-- Fim_do_Card_Body -->
+</div> <!-- Fim_do_Card-->        
+                                                                                                                  
+</div> <!-- Fim_do_Container_Principal-->
+                                                                   
+<!-- Início do Modal de Cadastrar Novo Membro -->
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Cadastrar novo Colaborador</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body"> <!-- Início do Formulario para Cadastrar Novo Membro -->
+      <form class="text-left p-1">
+      <input type="text" id="nome" class="form-control" placeholder="Nome" value="">    
+      <input type="text" id="desempenho" class="form-control" placeholder="Nota de Desempenho" value="">                                                                                                
+      <input type="password" id="codigo" class="form-control mb-4" placeholder="Código p/ Formulário" value="">
+      </form>                      
+      </div>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-warning" onclick="Cadastrar_Membro(listadeadms)" data-dismiss="modal">Registrar</a>
+        <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+    <!--/Content-->
+  </div>
+</div> 
+             
     
   
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>  
