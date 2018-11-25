@@ -53,7 +53,7 @@
 
 <!-- Disparador_do_Modal -->
 <button type="button" id="Disparador_Modal" class="btn btn-dark my-4btn btn-primary" data-toggle="modal" 
-        data-target="#centralModalDanger" onclick="Cadastrar_Adm(listadeadms)">
+        data-target="#centralModalDanger" onclick="Cadastrar_Adm()">
   ACESSAR
 </button> <!-- Fim_do_Disparador_do_Modal -->
 
@@ -131,20 +131,6 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script> <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/jsproprio.min.js"> </script> <!-- Script Próprio -->  
-    
-  <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
-    listadeadms = new Array(); // Global da própria página.
-    function Pegarlistadeadms(){
-          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
-          listadeadms_temp = JSON.parse(listadeadms_temp); 
-          if (listadeadms_temp == null){ 
-          listadeadms_temp = new Array();
-          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          listadeadms = listadeadms_temp;
-    }
-  window.onload = Pegarlistadeadms();
-    
-  </script>
   
 </body>
   
