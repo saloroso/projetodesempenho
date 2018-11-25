@@ -199,7 +199,13 @@
    var usuariologado = "";               
    Salvar_Usuariologado(usuariologado);}    
    
-  
+  function Ver_Individual(){
+      var lista = sessionStorage.getItem("BANCO_ADMS");
+      lista = JSON.parse(lista);  
+      var usuario = sessionStorage.getItem("USUARIO_LOGADO");
+      usuario = JSON.parse(usuario);  
+      alert ("Usuário é: " + usuario);
+  }
    
    // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
     function Criar_membro(nome, codigo, desempenho){
@@ -327,7 +333,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("Loading Processado 5644.");
+    alert ("Loading Processado 23.");
   }
    
   window.onload = Iniciar_Tudo();
