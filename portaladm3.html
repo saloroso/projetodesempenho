@@ -98,7 +98,7 @@
       </div>
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-warning" onclick="Cadastrar_Membro(listadeadms)" data-dismiss="modal">Registrar</a>
+        <a type="button" class="btn btn-warning" onclick="Cadastrar_Membro()" data-dismiss="modal">Registrar</a>
         <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
       </div>
     </div>
@@ -113,6 +113,13 @@
 
  <script type="text/javascript">  
   
+   listadeadms = new Array();
+   usuariologado = "";
+   
+   function Salvar_Bancodeadms(listadeadms){
+   sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms));
+   return true;}       
+   
    function Salvar_Usuariologado(usuariologado){
    sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado));
    return true;}  
@@ -120,7 +127,82 @@
    function Executar_Logout(){
    var usuariologado = "";               
    Salvar_Usuariologado(usuariologado);  
-   }              
+   }      
+   
+   // -- FUNÇÃO PARA CRIAR RESPONDENTE DE UM LIDER --------------------- // 
+    function Criar_membro(nome, codigo, desempenho){
+          this.nome = nome;
+          this.codigo = codigo;
+          this.desempenho = desempenho;
+          this.media_auto = 0;
+          this.media_comu = 0;
+          this.media_flex = 0;
+          this.media_foco = 0;
+          this.media_rel = 0;
+          this.media_ini = 0;
+          this.media_geral = 0;
+          this.respondido = 0; 
+          this.ranking = "Indefinido"; 
+       alert ("Respondente criado com sucesso.");
+    }
+   
+   // -- VERIFICAR SE O MEMBRO JÁ ESTA NA LISTA DE MEMBROS DO ADMINISTRADOR --------------------- // 
+      function Verificar_Membro(nome2, codigo2){
+          var nome = nome2;
+          var codigo = codigo2;
+          alert ("Entrei na função verificar membro.");
+          var lista = sessionStorage.getItem("BANCO_ADMS");
+          lista = JSON.parse(lista);  
+          var usuario = sessionStorage.getItem("USUARIO_LOGADO");
+          usuario = JSON.parse(usuario);  
+          var tamanho = lista.length;  
+          alert ("Quantidade de administradores até agora: " + tamanho);
+          alert ("Usuário é: " + usuario);
+          for (i=0;i<tamanho;i++){
+              if (lista[i].nome == usuario) {
+                  var tamanho4 = lista[i].membros.length; 
+                  for (j=0;j<tamanho4;j++){
+                      if ((codigo == "") || (nome == "") || (lista[i].membros[j].codigo == codigo) || (lista[i].membros[j].nome == nome){
+                      alert ("Entrei na função para ver se o código está errado e ele está vazio ou errado.");
+                      return false;
+                      }
+                  }
+              }
+          alert ("Codigo não existe e pode cadastrar.");
+          return true;
+      }
+   
+      // FUNÇÃO CHAMADA PARA CADASTRAR MEMBRO ---------------------- //
+    function Cadastrar_Membro(){
+        alert ("Entrei na função cadastrar membro.");
+        var lista = sessionStorage.getItem("BANCO_ADMS");
+        lista = JSON.parse(lista);  
+        var nome2 = document.getElementById("nome2").value;
+        var desempenho2 = document.getElementById("desempenho2").value;
+        var codigo2 = document.getElementById("codigo2").value;  
+        alert ("Nome: " + nome2);
+        alert ("Desempenho: " + desempenho2);
+        alert ("Código: " + codigo2);
+        var verificar2 = Verificar_Membro(nome2, codigo2);
+        if (verificar2==true){
+           alert ("Entrei no if de criar membro.");
+           var novo_membro = new Criar_membro(nome2, codigo2, desempenho2);
+           var tamanho_banco = listadeadms.length; 
+           var tamanho_equipe = 0;
+           for (i=0;i<tamanho_banco;i++){
+               if (lista[i].nome==usuariologado){
+                lista[i].membros.push(novo_membro);
+                   tamanho_equipe = lista[i].membros.length;
+                   alert ("Novo tamanho da equipe é: " + tamanho_equipe);
+                   document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
+                   Salvar_Bancodeadms(lista);
+                   alert ("Membro cadastrado.");
+               } else {
+                   alert ("Membro não cadastrado.");
+               }
+           }
+        }
+    }
    
    
   function Iniciar_Tudo(){
@@ -131,7 +213,7 @@
           if (listadeadms_temp == null){ 
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          var listadeadms = listadeadms_temp;      
+          listadeadms = listadeadms_temp;      
       
           // Recebendo usuario armazenado em Session.      
           var usuariologado_temp = sessionStorage.getItem("USUARIO_LOGADO"); 
@@ -139,7 +221,7 @@
           if (usuariologado_temp == null){ 
           usuariologado_temp = "";
           sessionStorage.setItem("USUARIO_LOGADO", JSON.stringify(usuariologado_temp));} 
-          var usuariologado = usuariologado_temp;
+          usuariologado = usuariologado_temp;
 
       // Variáveis que preencherão o painel.
       var nome_painel = String(usuariologado);
