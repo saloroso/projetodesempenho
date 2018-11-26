@@ -291,6 +291,11 @@
 
       var options = {
         title: 'DISTRIBUIÇÃO DE COLABORADORES CONFORME RANKING',
+        titleTextStyle: { 
+                  fontName: 'calibri',
+                  fontSize: 16,
+                  bold: true,
+                  italic: false },
         hAxis: {title: 'Desempenho',
                titleTextStyle: {
                fontName: 'calibri',
@@ -311,7 +316,8 @@
             fontName: 'calibri',
             auraColor: 'none',
           }
-        }
+        },
+        colors:['red','nj90909'].
       };
 
       var chart = new google.visualization.BubbleChart(document.getElementById('noAura'));
