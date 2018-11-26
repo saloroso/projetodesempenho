@@ -150,15 +150,20 @@
     
    // -- VERIFICAR SE O ADM JÁ ESTÁ CADASTRADO NO BANCO DE DADOS --------------------- // 
      function Verifica_Adm(nome1,email1,senha1,lista){ 
+       alert ("Entrou na função de verificar.");
           var lista2 = lista;     
           var tamanho6 = lista2.length;  
           for (r=0;r<tamanho6;r++){
+            alert ("Entrou no if de ver tamanho.");
                 if ((nome1=="") || (email1=="") || (senha1=="")){      
                       return false;
                 } else if ((lista2[r].nome==nome1) || (lista2[r].email==email1)){
                       return false;}
+            else {
+              alert ("Não está em nenhuma das duas condições, então pode cadastrar.");
+              return true;
+            }
           }            
-            return true;
       }
     
     // -- FUNÇÃO PARA CADASTRAR ADM NO BANCO DE DADOS --------------------- // 
