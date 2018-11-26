@@ -171,9 +171,12 @@
            }
          }
        }
+     }
+    }
     
     // -- FUNÇÃO PARA CADASTRAR ADM NO BANCO DE DADOS --------------------- // 
     function Cadastrar_Adm(){   
+          alert ("Testando entrada na função.");
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
           if (listadeadms_temp == null){ 
