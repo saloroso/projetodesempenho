@@ -153,6 +153,7 @@
        alert ("Entrou na função de verificar.");
           var lista2 = lista;     
           var tamanho6 = lista2.length;  
+       alert ("Quantidade de adms cadastrados: " + tamanho6);
           for (r=0;r<tamanho6;r++){
             alert ("Entrou no if de ver tamanho.");
                 if ((nome1=="") || (email1=="") || (senha1=="")){      
@@ -168,7 +169,7 @@
     
     // -- FUNÇÃO PARA CADASTRAR ADM NO BANCO DE DADOS --------------------- // 
     function Cadastrar_Adm(){   
-           alert ("Ver se corrigiu2.");
+           alert ("Ver se corrigiu4.");
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
           if (listadeadms_temp == null){ 
