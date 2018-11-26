@@ -284,8 +284,8 @@
        
       var Combined = new Array();
       Combined[0] = ['ID', 'Desempenho', 'Potencial', 'Ranking'];
-      Combined[1] = ['Teste1', 22, 90, 'Ranking1'];
-      Combined[2] = ['Teste2', 84, 76, 'Ranking2'];
+      Combined[1] = ['Teste1', 22, 90, 'Insuficiente'];
+      Combined[2] = ['Teste2', 84, 76, 'Alto Potencial'];
 
       var data = google.visualization.arrayToDataTable(Combined);
 
@@ -312,6 +312,15 @@
                 maxValue: 100,
                 minValue: 0
                },
+        series: {'Insuficiente': {color: 'Red'},
+                 'Eficaz': {color: 'Orange'},
+                 'Questionável': {color: 'Gold'},
+                 'Enigma': {color: 'Turquoise'},
+                 'Mantenedor': {color: 'SkyBlue'},
+                 'Comprometido': {color: 'SlateBlue'},
+                 'Forte Desempenho': {color: 'LawnGreen'},
+                 'Alto Potencial': {color: 'Green'},
+                },
         bubble: {
           opacity: 0.3,
           textStyle: {
@@ -628,7 +637,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("ZZZZ");
+    alert ("bbbbb");
   }
    
   window.onload = Iniciar_Tudo();
