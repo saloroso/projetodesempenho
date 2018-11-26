@@ -79,13 +79,27 @@
 <!-- Tentando Melhorar Card da Tabela -->
 <div class="card border-dark">
 <div class="card-body text-left">  
-<!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
 <button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
  data-target="#Modal3"> LISTAR TODA A EQUIPE
 </button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->                                            
 </div> <!-- Fim_do_Card_Body -->
 </div> <!-- Tentando Melhorar Card da Tabela -->    
-                                                                                                                    
+                                                      
+  
+<!-- Card do Gráfico da Tabela -->
+<div class="card border-dark">
+<div class="card-body text-left">  
+  <div id="noAura" style="width: 900px; height: 500px;"></div>                                          
+</div> <!-- Fim_do_Card_Body -->
+</div> <!-- Card do Gráfico da Tabela -->      
+  
+  
+  
+  
+  
+  
+
+  
 </div> <!-- Fim_do_Container_Principal-->
   
 
@@ -256,6 +270,60 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Provindo do Google Graphics -->
 
  <script type="text/javascript">  
+   
+   // -- FUNCTION QUE CRIA O GRÁFICO DE BOLHAS --------------------- // 
+   google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+   
+   function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['ID', 'Life Expectancy', 'Fertility Rate', 'Region',     'Population'],
+        ['CAN',    80.66,              1.67,      'North America',  33739900],
+        ['DEU',    79.84,              1.36,      'Europe',         81902307],
+        ['DNK',    78.6,               1.84,      'Europe',         5523095],
+        ['EGY',    72.73,              2.78,      'Middle East',    79716203],
+        ['GBR',    80.05,              2,         'Europe',         61801570],
+        ['IRN',    72.49,              1.7,       'Middle East',    73137148],
+        ['IRQ',    68.09,              4.77,      'Middle East',    31090763],
+        ['ISR',    81.55,              2.96,      'Middle East',    7485600],
+        ['RUS',    68.6,               1.54,      'Europe',         141850000],
+        ['USA',    78.09,              2.05,      'North America',  307007000]
+      ]);
+
+      var options = {
+        title: 'Correlation between life expectancy, fertility rate ' +
+               'and population of some world countries (2010)',
+        hAxis: {title: 'Life Expectancy'},
+        vAxis: {title: 'Fertility Rate'},
+        bubble: {
+          textStyle: {
+            auraColor: 'none',
+          }
+        }
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('noAura'));
+      chart.draw(data, options);
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
  // -- FUNCTION QUE CRIA A TABELA --------------------- // 
    google.charts.load('current', {'packages':['table']});
