@@ -239,39 +239,48 @@
       var lista = sessionStorage.getItem("BANCO_ADMS");
       lista = JSON.parse(lista);  
       var usuario = sessionStorage.getItem("USUARIO_LOGADO");
-      usuario = JSON.parse(usuario);  
-        
-      var tamanho_banco = lista.length;  
+      usuario = JSON.parse(usuario);             
+       
+      var Combined = new Array();
+      Combined[0] = ['Nome', 'Ranking', 'Desempenho', 'Autodesenvolvimento',
+                     'Comunicação', 'Disciplina', 'Flexibilidade', 'Foco no Cliente', 'Relacionamento Interpessoal',
+                     'Iniciativa', 'Avaliação Geral'];
+      var tamanho_banco = lista.length; 
+      var nome_painel2;
+      var ranking;
+      var desempenho;
+      var media_auto;
+      var media_comu;
+      var media_disc;
+      var media_flex;
+      var media_foco;
+      var media_rel;
+      var media_ini;
+      var media_geral;
       for (i=0;i<tamanho_banco;i++){
          if (lista[i].nome == usuario) {
-           var dados_tabela = lista[i].membros;
+           var tamanho_equipe = lista[i].membros.length; 
+           for (j=0;j<tamanho_equipe;j++){
+              nome_painel2 = lista[i].membros[j].nome;
+              ranking = lista[i].membros[j].ranking;
+              desempenho = lista[i].membros[j].desempenho;
+              media_auto = lista[i].membros[j].media_auto; 
+              media_comu = lista[i].membros[j].media_comu; 
+              media_disc = lista[i].membros[j].media_disc; 
+              media_flex = lista[i].membros[j].media_flex; 
+              media_foco = lista[i].membros[j].media_foco; 
+              media_rel = lista[i].membros[j].media_rel; 
+              media_ini = lista[i].membros[j].media_ini; 
+              media_geral = lista[i].membros[j].media_geral;   
+              Combined[i + 1] = [nome_painel2, ranking, desempenho, media_auto,
+                                media_comu, media_disc, media_flex, media_foco, media_rel,
+                                media_ini, media_geral];
+           }
          }
       }
-       
-       var Combined = new Array();
-       Combined[0] = ['Results', 'First', 'Second'];
-       Combined[1] = ['1', '2', '3'];
-       Combined[2] = ['4', '5', '6'];
-       
        var data = google.visualization.arrayToDataTable(Combined, false);
-        
-       var formatter = new google.visualization.BarFormat({width: 120});
-       formatter.format(data, 1); // Apply formatter to second column
-        
-       /* Código original do google grafics        
-        var data = google.visualization.arrayToDataTable([
-       ['Employee Name', 'Salary'],
-       ['Mike', {v:22500, f:'22,500'}], // Format as "22,500".
-       ['Bob', 35000],
-       ['Alice', 44000],
-       ['Frank', 27000],
-       ['Floyd', 92000],
-       ['Fritz', 18500]
-      ],
-      false); // 'false' means that the first row contains labels, not data.      
-       */    
-        var table = new google.visualization.Table(document.getElementById('table_div'));
-        table.draw(data, {allowHtml: true, showRowNumber: true, width: '100%', height: '100%'});
+       var table = new google.visualization.Table(document.getElementById('table_div'));
+       table.draw(data, {allowHtml: true, showRowNumber: true, width: '100%', height: '100%'});
       }
    
    
@@ -333,7 +342,6 @@
       var tamanho_banco = lista.length;  
       for (i=0;i<tamanho_banco;i++){
          if (lista[i].nome == usuario) {
-            alert ("Entrei na função que troca para modal certa.");
              Modal_certa();
              var tamanho_equipe = lista[i].membros.length; 
              for (j=0;j<tamanho_equipe;j++){
@@ -514,7 +522,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("qwqwqeaaaaaaaaa");
+    alert ("vbhjnmkg");
   }
    
   window.onload = Iniciar_Tudo();
