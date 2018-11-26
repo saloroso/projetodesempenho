@@ -284,8 +284,6 @@
        
       var Combined = new Array();
       Combined[0] = ['ID', 'Desempenho', 'Potencial', 'Ranking'];
-      Combined[1] = ['Teste1', 22, 90, 'Insuficiente'];
-      Combined[2] = ['Teste2', 84, 76, 'Alto Potencial'];
       var tamanho_banco = lista.length; 
       var nome5;
       var potencial5;
@@ -298,6 +296,7 @@
               nome5 = lista[i].membros[j].nome;
               potencial5 = lista[i].membros[j].media_geral;
               desempenho5 = lista[i].membros[j].desempenho;
+              parseInt(desempenho5, 10);
               ranking5 = lista[i].membros[j].ranking;
               Combined[j + 1] = [nome5, desempenho5, potencial5, ranking5];
            }
@@ -644,7 +643,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("wqwqwqwqwq");
+    alert ("bbbbu");
   }
    
   window.onload = Iniciar_Tudo();
