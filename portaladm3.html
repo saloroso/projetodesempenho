@@ -286,6 +286,23 @@
       Combined[0] = ['ID', 'Desempenho', 'Potencial', 'Ranking'];
       Combined[1] = ['Teste1', 22, 90, 'Insuficiente'];
       Combined[2] = ['Teste2', 84, 76, 'Alto Potencial'];
+      var tamanho_banco = lista.length; 
+      var nome5;
+      var potencial5;
+      var desempenho5;
+      var ranking5;
+      for (i=0;i<tamanho_banco;i++){
+         if (lista[i].nome == usuario) {
+           var tamanho_equipe = lista[i].membros.length; 
+           for (j=0;j<tamanho_equipe;j++){
+              nome5 = lista[i].membros[j].nome;
+              potencial5 = lista[i].membros[j].media_geral;
+              desempenho5 = lista[i].membros[j].desempenho;
+              ranking5 = lista[i].membros[j].ranking;
+              Combined[j + 1] = [nome5, desempenho5, potencial5, ranking5];
+           }
+         }
+      }   
 
       var data = google.visualization.arrayToDataTable(Combined);
 
@@ -341,24 +358,6 @@
       var chart = new google.visualization.BubbleChart(document.getElementById('noAura'));
       chart.draw(data, options);
     }
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
  // -- FUNCTION QUE CRIA A TABELA --------------------- // 
    google.charts.load('current', {'packages':['table']});
@@ -645,7 +644,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("aaaaaxxx");
+    alert ("wqwqwqwqwq");
   }
    
   window.onload = Iniciar_Tudo();
