@@ -49,7 +49,7 @@
     <div class="d-flex justify-content-center my-4">
     <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
         <form class="range-field w-25">
-            <input class="border-0" type="range" min="0" max="100" />
+            <input class="border-0" id="uiy" type="range" min="0" max="100" />
         </form>
     <span class="font-weight-bold indigo-text ml-2 mt-1">100</span>
 </div>
@@ -57,6 +57,10 @@
     
     <label for="customRange1">Example range</label>
 <input type="range" class="custom-range" id="customRange1">
+    
+    <div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
     
     
     <p class="h4 mb-2 text-center">FORMULÁRIO DE AUTO-AVALIAÇÃO</p>
@@ -180,7 +184,7 @@
     <input type="text" id="ini3" class="form-control mb-3" placeholder="0" value=0>
     <!--Fim do Iniciativa-->
 
-    <button class="btn btn-dark btn-block my-4" type="button" onclick="Processar_Formulario(listadeadms)">ENVIAR FORMULÁRIO</button>
+    <button class="btn btn-dark btn-block my-4" type="button" onclick="Teste2()">ENVIAR FORMULÁRIO</button>
 
     <div class="text-center">
         <p>
@@ -205,6 +209,13 @@
   <script type="text/javascript" src="js/jsproprio.min.js"></script>
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     listadeadms = new Array(); // Global da própria página.
+    
+    function Teste2(){
+      alert ("ver.56.");
+      var codigodorespondente = document.getElementById("uiy").value;
+      alert ("Valor é: " + codigodorespondente);
+    }
+    
     function Pegarlistadeadms(){
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
