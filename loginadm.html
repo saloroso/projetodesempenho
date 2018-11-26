@@ -156,7 +156,10 @@
                 var valor = "#Modal_Acerto";
                 document.getElementById("Disparador_Modal").setAttribute("data-target", valor);   
                 return true;
-            } 
+            } else {
+              var valor = "#Modal_Erro";
+              document.getElementById("Disparador_Modal").setAttribute("data-target", valor);   
+            }
         }
     } 
     
