@@ -300,7 +300,8 @@
                titleTextStyle: {
                fontSize: 16,
                fontName: 'calibri',
-               bold: true},
+               bold: true,
+               italic: false},
                 maxValue: 100,
                 viewWindow: {
                   max: 100,
@@ -311,8 +312,12 @@
                 titleTextStyle: {
                 fontSize: 16,    
                fontName: 'calibri',
-               bold: true},
+               bold: true,
+                italic: false},
                 maxValue: 100,
+                viewWindow: {
+                  max: 100,
+                  min: 0},
                 minValue: 0
                },
         series: {'Insuficiente': {color: 'Red'},
@@ -640,7 +645,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("qqqqq");
+    alert ("aaaaaxxx");
   }
    
   window.onload = Iniciar_Tudo();
