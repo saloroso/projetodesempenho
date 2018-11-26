@@ -79,16 +79,55 @@
 <!-- Inicio_do_Card da Tabela -->    
 <div class="card border-dark">
 <div class="card-body text-left">  
-<div id="table_div"></div>                       
+                    
 </div> <!-- Fim_do_Card_Body -->
 </div> <!-- Fim_do_Card da Tabela -->
+  
+<!-- Tentando Melhorar Card da Tabela -->
+<div class="card border-dark">
+<div class="card-body text-left">  
+<!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
+<button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
+ data-target="#Modal3"> LISTAR TODA A EQUIPE
+</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->                                            
+</div> <!-- Fim_do_Card_Body -->
+</div> <!-- Tentando Melhorar Card da Tabela -->    
                                                                                                                     
 </div> <!-- Fim_do_Container_Principal-->
   
         
 
   <!-- INÍCIO DOS MODAIS -->
-  
+    
+    <!-- INÍCIO DO MODAL DE MELHORAR CARD DA TABELA  -->
+<div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Cadastrar novo Colaborador</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body"> <!-- Início do Formulario para Cadastrar Novo Membro -->
+
+        <div id="table_div"></div>   
+        
+      </div>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-outline-warning waves-effect" onclick="Cadastrar_Membro()" data-dismiss="modal">Registrar</a>
+        <a type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Cancelar</a>
+      </div>
+    </div>
+    <!--/Content-->
+  </div>
+</div>
+    
   <!-- INÍCIO DO MODAL DE CADASTRAR NOVO MEMBRO  -->
 <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
@@ -522,7 +561,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("2323ss23");
+    alert ("VVB7676");
   }
    
   window.onload = Iniciar_Tudo();
