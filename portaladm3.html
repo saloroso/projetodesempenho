@@ -243,7 +243,7 @@
        
       var Combined = new Array();
       Combined[0] = ['Nome', 'Ranking', 'Desempenho', 'Autodesenvolvimento',
-                     'Comunicação', 'Disciplina', 'Flexibilidade', 'Foco no Cliente', 'Relacionamento Interpessoal',
+                     'Comunicação', 'Disciplina', 'Flexibilidade', 'Foco no Cliente', 'Rel. Interpessoal',
                      'Iniciativa', 'Avaliação Geral'];
       var tamanho_banco = lista.length; 
       var nome_painel2;
@@ -272,7 +272,7 @@
               media_rel = lista[i].membros[j].media_rel; 
               media_ini = lista[i].membros[j].media_ini; 
               media_geral = lista[i].membros[j].media_geral;   
-              Combined[i + 1] = [nome_painel2, ranking, desempenho, media_auto,
+              Combined[j + 1] = [nome_painel2, ranking, desempenho, media_auto,
                                 media_comu, media_disc, media_flex, media_foco, media_rel,
                                 media_ini, media_geral];
            }
@@ -522,7 +522,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("vbhjnmkg");
+    alert ("2323ss23");
   }
    
   window.onload = Iniciar_Tudo();
