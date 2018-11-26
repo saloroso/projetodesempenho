@@ -163,6 +163,7 @@
     
     // -- FUNÇÃO PARA CADASTRAR ADM NO BANCO DE DADOS --------------------- // 
     function Cadastrar_Adm(){   
+           alert ("Ver se corrigiu2.");
           var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
           listadeadms_temp = JSON.parse(listadeadms_temp); 
           if (listadeadms_temp == null){ 
@@ -179,8 +180,10 @@
                Salvar_Bancodeadms(lista);  
                var valor = "#Modal_Acerto";
                document.getElementById("Disparador_Modal").setAttribute("data-target", valor);  
-            alert ("Ver se corrigiu.");
-          } 
+          } else {
+            var valor2 = "#Modal_Erro";
+            document.getElementById("Disparador_Modal").setAttribute("data-target", valor2); 
+          }
     }
    
   </script>
