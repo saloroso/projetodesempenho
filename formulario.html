@@ -5,43 +5,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Avaliação de Desempenho 2.0</title> <!-- Font Awesome -->
+  <title>Arredonda Minha Nota</title>  <!-- Font Awesome -->
+  <link rel = "icon" type = "image/png" href = "img/prayer.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Material Design Bootstrap -->
-  <link href="css/mdb.min.css" rel="stylesheet"> <!-- Your custom styles (optional) -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">  <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-<!--Main Navigation-->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
-      <a class="navbar-brand" href="#">Disciplina HTML 5</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/">Como Funciona
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/formulario">Preencher Formulário</a>
-           <span class="sr-only">(current)</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://saloroso.github.io/projetodesempenho/loginadm">Portal do Líder</a>
-          </li>
-        </ul>
-        <span class="navbar-text white-text">
-          AVALIAÇÃO DE DESEMPENHO
-        </span>
-      </div>
-    </nav>
-  </header>
-  <!--Main Navigation-->
+<body>  
+ 
+  <header> 
+    <nav class="navbar navbar-expand-lg navbar-dark elegant-color"> <!-- Início_da_Barra_de_Navegação-->
+     <img src="img/prayer.png" alt="deu erro" height="25px" width="25px">   
+      <a class="navbar-brand" href="https://saloroso.github.io/projetodesempenho/">
+      &nbsp;&nbsp;&nbsp;ARREDONDA MINHA NOTA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+  <a class="btn btn-outline-warning btn-sm" onclick="Executar_Logout()" 
+     href="https://saloroso.github.io/projetodesempenho/loginadm" role="button">LOGOUT</a>
+  </nav> <!-- Fim_da_Barra_de_Navegação-->
+ </header>  
+  
+  <div class="container mt-5 mb-2">
+  
   
   <form class="border border-light p-5">
     
@@ -175,6 +171,8 @@
 
     </div>
 </form>
+    
+    </div> <!-- Fim_do_Container_Principal-->
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
@@ -196,7 +194,7 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("Load_session automáticos realizados com sucesso vr23656.")}
+        alert ("Load_session automáticos realizados com sucesso 3232324.")}
   window.onload = Pegarlistadeadms();
   </script>
 </body>
