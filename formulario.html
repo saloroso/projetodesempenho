@@ -162,12 +162,12 @@
   
           <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
 <button type="button" id="Enviar_Form" class="btn my-4btn btn-dark btn-md" data-toggle="modal" 
- data-target="#Modal1"> CADASTRAR NOVO COLABORADOR
+ data-target="#Modal1"> ENVIAR FORMULÁRIO
 </button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
     
     <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
 <button type="button" id="Limpar_Form" class="btn btn-default btn-md" data-toggle="modal" 
- data-target="#Modal1"> CADASTRAR NOVO COLABORADOR
+ data-target="#Modal1"> Limpar Formulário
 </button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
  
 </div> <!-- Fim_do_Card_Body --> 
@@ -175,18 +175,6 @@
 </div> <!-- Fim_do_Card-->      
 </div> <!-- Fim_do_Container_Principal-->    
      
-        <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
-<button type="button" id="Enviar_Form" class="btn my-4btn btn-dark btn-md" data-toggle="modal" 
- data-target="#Modal1"> CADASTRAR NOVO COLABORADOR
-</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
-    
-    <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
-<button type="button" id="Limpar_Form" class="btn btn-default btn-md" data-toggle="modal" 
- data-target="#Modal1"> CADASTRAR NOVO COLABORADOR
-</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
- 
-   
-
   
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>  
 <script type="text/javascript" src="js/popper.min.js"></script> <!-- Bootstrap tooltips -->  
@@ -195,18 +183,11 @@
   
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     
-    listadeadms = new Array(); // Global da própria página.
+      function Iniciar_Tudo(){
+        alert ("Testes de Script.");
+      }
     
-      function Pegarlistadeadms(){
-          var listadeadms_temp = sessionStorage.getItem("BANCO_ADMS");
-          listadeadms_temp = JSON.parse(listadeadms_temp); 
-          if (listadeadms_temp == null){ 
-          listadeadms_temp = new Array();
-          sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
-          listadeadms = listadeadms_temp;
-        alert ("99999999.")}
-    
-  window.onload = Pegarlistadeadms();
+  window.onload = Iniciar_Tudo();
     
   </script>
 </body>
