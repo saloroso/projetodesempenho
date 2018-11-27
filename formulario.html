@@ -161,7 +161,7 @@
      <p><br><hr size="30"><br>
   
           <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
-<button type="button" id="Enviar_Form" class="btn my-4btn btn-dark btn-md" data-toggle="modal" 
+<button type="button" id="Enviar_Form" class="btn my-4btn btn-dark btn-md" onclick="Processar_Formulario()" data-toggle="modal" 
  data-target="#Modal1"> ENVIAR FORMULÁRIO
 </button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
     
@@ -184,6 +184,106 @@
 <script type="text/javascript" src="js/mdb.min.js"></script> <!-- MDB core JavaScript -->
   
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
+   
+    // errado
+    function Verificar_Formulario(codigo1,nome1,lider1){
+    alert ("Entrou na função Verificar_Formulario 1.");
+    var lista = sessionStorage.getItem("BANCO_ADMS");
+    lista = JSON.parse(lista);       
+    var tamanho7 = lista.length;   
+    alert ("Quantidade de Adms cadastrados: " + tamanho7);
+    for (z=0;z<tamanho7;z++){
+        if (lista[z].nome == lider1){
+           var tamanhomembros = lista[z].membros.length;
+            for (y=0;y<tamanhomembros;y++){
+                if ((lista[z].membros[y].nome==nome1) && (lista[z].membros[y].codigo==codigo1)){
+                    return lista[z].membros[y];
+                    }
+            }
+        }
+    } 
+    return undefined;
+}
+
+     function Processar_Formulario(){   
+        alert ("Entrou na função Processar_Formulario 10.");     
+        var lista = sessionStorage.getItem("BANCO_ADMS");
+        lista = JSON.parse(lista);       
+        var codigodorespondente = document.getElementById("codigodorespondente").value;
+        var nomedorespondente = document.getElementById("nomedorespondente").value;    
+        var liderdorespondente = document.getElementById("liderdorespondente").value;
+        var auto1 = document.getElementById("auto1").value;    
+        var auto2 = document.getElementById("auto2").value;
+        var auto3 = document.getElementById("auto3").value;   
+        var comu1 = document.getElementById("comu1").value;  
+        var comu2 = document.getElementById("comu2").value; 
+        var comu3 = document.getElementById("comu3").value; 
+        var disc1 = document.getElementById("disc1").value; 
+        var disc2 = document.getElementById("disc2").value; 
+        var disc3 = document.getElementById("disc3").value; 
+        var flex1 = document.getElementById("flex1").value;  
+        var flex2 = document.getElementById("flex2").value; 
+        var flex3 = document.getElementById("flex3").value; 
+        var foco1 = document.getElementById("foco1").value; 
+        var foco2 = document.getElementById("foco2").value; 
+        var foco3 = document.getElementById("foco3").value; 
+        var rel1 = document.getElementById("rel1").value;  
+        var rel2 = document.getElementById("rel2").value; 
+        var rel3 = document.getElementById("rel3").value; 
+        var ini1 = document.getElementById("ini1").value; 
+        var ini2 = document.getElementById("ini2").value; 
+        var ini3 = document.getElementById("ini3").value;      
+        auto1 = parseInt(auto1,10);
+        auto2 = parseInt(auto2,10);
+        auto3 = parseInt(auto3,10);
+        comu1 = parseInt(comu1,10);
+        comu2 = parseInt(comu2,10);
+        comu3 = parseInt(comu3,10);
+        disc1 = parseInt(disc1,10);
+        disc2 = parseInt(disc2,10);
+        disc3 = parseInt(disc3,10);
+        flex1 = parseInt(flex1,10);
+        flex2 = parseInt(flex2,10);
+        flex3 = parseInt(flex3,10);
+        foco1 = parseInt(foco1,10);
+        foco2 = parseInt(foco2,10);
+        foco3 = parseInt(foco3,10);
+        rel1 = parseInt(rel1,10);
+        rel2 = parseInt(rel2,10);
+        rel3 = parseInt(rel3,10);
+        ini1 = parseInt(ini1,10);
+        ini2 = parseInt(ini2,10);
+        ini3 = parseInt(ini3,10);                    
+        var media_auto1 = (auto1 + auto2 + auto3)/3;
+        var media_comu1 = (comu1 + comu2 + comu3)/3;
+        var media_disc1 = (disc1 + disc2 + disc3)/3;
+        var media_flex1 = (flex1 + flex2 + flex3)/3;
+        var media_foco1 = (foco1 + foco2 + foco3)/3;
+        var media_rel1 = (rel1 + rel2 + rel3)/3;
+        var media_ini1 = (ini1 + ini2 + ini3)/3; 
+        var media_geral1 = 0;
+        media_geral1 = (media_auto1 + media_comu1 + media_disc1 + media_flex1 + media_foco1 + media_rel1 + media_ini1)/7;
+        alert (media_geral1);
+       
+              var encontrado = Verificar_Formulario(codigodorespondente,nomedorespondente,liderdorespondente);
+   
+              if (encontrado != undefined){ 
+                  alert ("Individuo encontrado.");
+                  encontrado.media_auto = media_auto1;
+                  encontrado.media_comu = media_comu1;
+                  encontrado.media_disc = media_disc1;
+                  encontrado.media_flex = media_flex1;
+                  encontrado.media_foco = media_foco1;
+                  encontrado.media_rel = media_rel1;
+                  encontrado.media_ini = media_ini1;
+                  encontrado.media_geral = media_geral1;
+                  encontrado.respondido = "Respondido";
+                  Salvar_Bancodeadms(lista); 
+                   
+              } else {
+                  alert ("Código do acesso, nome do respondente ou nome do líder estão incorretos, favor adequá-los.");
+              }
+     }
     
     function Limpar_lista(){
         var codigodorespondente = document.getElementById("codigodorespondente").value = "";
@@ -213,7 +313,7 @@
     }
     
       function Iniciar_Tudo(){
-        alert ("12671.");
+        alert ("plplp.");
       }
     
   window.onload = Iniciar_Tudo();
