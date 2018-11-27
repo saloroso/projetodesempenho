@@ -189,6 +189,39 @@
    sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms));
    return true;}      
     
+    function Calcular_Ranking(desempenho, media)
+    {
+      var resultado;
+      if ((desempenho<30) && (media<30)){
+        resultado = "Insuficiente";
+        return resultado;
+      } else if ((desempenho<70 && desempenho>30) && (media<30)){
+        resultado = "Eficaz";
+        return resultado;
+      } else if ((desempenho<30) && (media<70 && media>30)){
+        resultado = "Questionável";
+        return resultado;
+      } else if ((desempenho<30) && (media>69)){
+        resultado = "Enigma";
+        return resultado;
+      } else if ((desempenho>29 && desempenho<70) && (media>29 && media<70)){
+        resultado = "Mantenedor";
+        return resultado;
+      } else if ((desempenho>69) && (media>29 && media<70)){
+        resultado = "Comprometido";
+        return resultado;
+      } else if ((desempenho>70) && (media>30)){
+        resultado = "Forte Desempenho";
+        return resultado;
+      } else if ((desempenho>30) && (media>70)){
+        resultado = "Forte Desempenho";
+        return resultado;
+      } else if ((desempenho<70) && (media<70)){
+        resultado = "Alto Potencial";
+        return resultado;
+      } 
+    }
+    
      function Processar_Formulario(){   
         alert ("Entrou na função Processar_Formulario 10.");     
         var lista = sessionStorage.getItem("BANCO_ADMS");
@@ -267,6 +300,8 @@
             for (y=0;y<tamanhomembros;y++){
                 if ((lista[z].membros[y].nome==nomedorespondente) && (lista[z].membros[y].codigo==codigodorespondente)){
                   alert ("Individuo encontrado.");
+                  var desempenho3 = lista[z].membros[y].desempenho;
+                  var resultado9 = Calcular_Ranking(desempenho3, media_geral1)
                   lista[z].membros[y].media_auto = media_auto1;
                   lista[z].membros[y].media_comu = media_comu1;
                   lista[z].membros[y].media_disc = media_disc1;
@@ -276,6 +311,7 @@
                   lista[z].membros[y].media_ini = media_ini1;
                   lista[z].membros[y].media_geral = media_geral1;
                   lista[z].membros[y].respondido = "Respondido";
+                  lista[z].membros[y].ranking = resultado9;
                   Salvar_Bancodeadms(lista);
                   return true;
                 } else ("Pessoa não encontrada.");
@@ -313,7 +349,7 @@
     }
     
       function Iniciar_Tudo(){
-        alert ("323.");
+        alert ("567.");
       }
     
   window.onload = Iniciar_Tudo();
