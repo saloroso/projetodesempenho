@@ -166,8 +166,8 @@
 </button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
     
     <!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
-<button type="button" id="Limpar_Form" class="btn btn-default btn-md" data-toggle="modal" 
- data-target="#Modal1"> Limpar Formulário
+<button type="button" id="Limpar_Form" class="btn btn-default btn-md" onclick="Limpar_lista()" data-toggle="modal" 
+ data-target="#Modal1" > Limpar Formulário
 </button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->   
  
 </div> <!-- Fim_do_Card_Body --> 
@@ -185,8 +185,35 @@
   
   <script type="text/javascript"> // SCRIPT DA PRÓPRIA PÁGINA. //
     
+    function Limpar_lista(){
+        var codigodorespondente = document.getElementById("codigodorespondente").value = "";
+        var nomedorespondente = document.getElementById("nomedorespondente").value = "";    
+        var liderdorespondente = document.getElementById("liderdorespondente").value = "";
+        var auto1 = document.getElementById("auto1").value=0;  
+        var auto2 = document.getElementById("auto2").value=0;
+        var auto3 = document.getElementById("auto3").value=0;   
+        var comu1 = document.getElementById("comu1").value=0;  
+        var comu2 = document.getElementById("comu2").value=0; 
+        var comu3 = document.getElementById("comu3").value=0; 
+        var disc1 = document.getElementById("disc1").value=0; 
+        var disc2 = document.getElementById("disc2").value=0; 
+        var disc3 = document.getElementById("disc3").value=0; 
+        var flex1 = document.getElementById("flex1").value=0;  
+        var flex2 = document.getElementById("flex2").value=0; 
+        var flex3 = document.getElementById("flex3").value=0; 
+        var foco1 = document.getElementById("foco1").value=0; 
+        var foco2 = document.getElementById("foco2").value=0; 
+        var foco3 = document.getElementById("foco3").value=0; 
+        var rel1 = document.getElementById("rel1").value=0;  
+        var rel2 = document.getElementById("rel2").value=0; 
+        var rel3 = document.getElementById("rel3").value=0; 
+        var ini1 = document.getElementById("ini1").value=0; 
+        var ini2 = document.getElementById("ini2").value=0; 
+        var ini3 = document.getElementById("ini3").value=0;      
+    }
+    
       function Iniciar_Tudo(){
-        alert ("11.");
+        alert ("12671.");
       }
     
   window.onload = Iniciar_Tudo();
