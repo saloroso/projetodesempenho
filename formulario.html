@@ -189,9 +189,6 @@
    sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms));
    return true;}      
     
-    function Calcular_Ranking(){
-    }
-
      function Processar_Formulario(){   
         alert ("Entrou na função Processar_Formulario 10.");     
         var lista = sessionStorage.getItem("BANCO_ADMS");
@@ -276,6 +273,8 @@
             }
         }
         }
+     }
+     
                     
     function Limpar_lista(){
         var codigodorespondente = document.getElementById("codigodorespondente").value = "";
@@ -305,7 +304,7 @@
     }
     
       function Iniciar_Tudo(){
-        alert ("888888888888877777777.");
+        alert ("323.");
       }
     
   window.onload = Iniciar_Tudo();
