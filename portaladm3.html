@@ -37,15 +37,9 @@
  </header>  
   
   <div class="container mt-5 mb-2"> <!-- Inicio_do_Container_Principal-->
+    
+      <div class="row">
   
-<div class="card border-dark"> <!-- Inicio_do_Card de Cadastrar novo Colaborador -->
-<div class="card-body text-left">  
-<!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
-<button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
- data-target="#Modal1"> CADASTRAR NOVO COLABORADOR
-</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->                                            
-</div> <!-- Fim_do_Card_Body -->
-</div> <!-- Fim_do_Card de Cadastrar novo Colaborador -->    
   
 <div class="card border-dark"> <!-- Inicio_do_Card do Painel-->
 <h4 class="card-header text-warning bg-dark mb-1 lighten-1 text-uppercase font-weight-bold text-left py-1">Substituir1</h4>   
@@ -61,7 +55,37 @@
 </div> <!-- Fim_do_Card_Body -->
 </div> <!-- Fim_do_Card-->      
 
- <!-- Inicio_do_Card de Ver Dados Individuais -->    
+
+ <!-- Card do Gráfico da Tabela -->
+<div class="card border-dark">
+<div class="card-body text-left">  
+  <div id="noAura" style="width: 900px; height: 500px;"></div>                                          
+</div> <!-- Fim_do_Card_Body -->
+</div> <!-- Card do Gráfico da Tabela -->     
+        
+        </div>
+  
+<!-- Tentando Melhorar Card da Tabela -->
+<div class="card border-dark">
+<div class="card-body text-left">  
+<button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
+ data-target="#Modal3"> LISTAR TODA A EQUIPE
+</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->                                            
+</div> <!-- Fim_do_Card_Body -->
+</div> <!-- Tentando Melhorar Card da Tabela -->    
+                
+  <div class="card border-dark"> <!-- Inicio_do_Card de Cadastrar novo Colaborador -->
+<div class="card-body text-left">  
+<!-- Disparador_do_Modal de Abrir Form para Cadastrar novo Colaborador-->
+<button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
+ data-target="#Modal1"> CADASTRAR NOVO COLABORADOR
+</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->                                            
+</div> <!-- Fim_do_Card_Body -->
+</div> <!-- Fim_do_Card de Cadastrar novo Colaborador -->    
+  
+ 
+  
+   <!-- Inicio_do_Card de Ver Dados Individuais -->    
 <div class="card border-dark">
 <div class="card-body text-left">  
 <div class="input-group md-form form-sm form-2 pl-0">
@@ -75,25 +99,6 @@
  data-target="#Modal2"> VISUALIZAR RESULTADOS INDIVIDUAIS                                      
 </div> <!-- Fim_do_Card_Body -->
 </div> <!-- Fim_do_Card de Ver Dados Individuais -->    
-  
-<!-- Tentando Melhorar Card da Tabela -->
-<div class="card border-dark">
-<div class="card-body text-left">  
-<button type="button" id="Disparador_Modal" class="btn my-4btn btn-warning" data-toggle="modal" 
- data-target="#Modal3"> LISTAR TODA A EQUIPE
-</button> <!-- Fechar_Modal de Abrir Form para Cadastrar novo Colaborador -->                                            
-</div> <!-- Fim_do_Card_Body -->
-</div> <!-- Tentando Melhorar Card da Tabela -->    
-                                                      
-  
-<!-- Card do Gráfico da Tabela -->
-<div class="card border-dark">
-<div class="card-body text-left">  
-  <div id="noAura" style="width: 900px; height: 500px;"></div>                                          
-</div> <!-- Fim_do_Card_Body -->
-</div> <!-- Card do Gráfico da Tabela -->      
-  
-  
   
   
   
@@ -646,7 +651,7 @@
       document.body.innerHTML = document.body.innerHTML.replace('Substituir3', tamanho_equipe);
       document.body.innerHTML = document.body.innerHTML.replace('Substituir4', preenchidos_temp);
 
-    alert ("bg");
+    alert ("44332");
   }
    
   window.onload = Iniciar_Tudo();
