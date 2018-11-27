@@ -43,18 +43,19 @@
   <p class="h6 mb-4">Pontue de 0 a 100 considerando zero como total
     ausência de atendimento <br> e cem como completo atendimento a competência, conforme o seu próprio cargo.</p>
   </h4>   
-<div class="card-body text-left">
-  <form class="border p-2">
+<div class="card-body">
     
     <ul class="list-group">
       
 <li class="list-group-item d-flex justify-content-between align-items-center list-group-item font-weight-bold">
   
      <!--Começo da Identificação-->
-    <p class="h5 mb-4 text-left text-danger">IDENTIFICAÇÃO</p><p>
+    <p class="h5 mb-4 text-left text-danger">IDENTIFICAÇÃO</p><br>
       
     <p class="h6 mb-4 text-left text-dark">Código de acesso:</p>
     <input type="range" class="custom-range" id="customRange1">
+  
+  </ul>
   
   
   
@@ -89,7 +90,6 @@
 <label for="customRange1">Example range</label><input type="range" class="custom-range" id="customRange1"></li>
       
     
-    </ul>
     
     </div> <!-- Fim_do_Card_Body -->
 </div> <!-- Fim_do_Card-->   
@@ -254,7 +254,7 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("8888.")}
+        alert ("8666.")}
   window.onload = Pegarlistadeadms();
   </script>
 </body>
