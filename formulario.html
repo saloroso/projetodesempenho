@@ -45,16 +45,20 @@
   </h4>   
 <div class="card-body">
     
-    <ul class="list-group">
-      
-    <li class="list-group-item d-flex  list-group-item font-weight-bold">
+    <ul class="list-group">   
   
      <!--Começo da Identificação-->
-    <p class="h5 mb-4 text-left text-danger">IDENTIFICAÇÃO</p><br>
+    <p class="h5 mb-4 text-left text-danger">IDENTIFICAÇÃO</p>
       
-      <p class="h6 mb-4 text-left text-dark">Código de acesso:</p>
-    <input type="range" class="custom-range" id="customRange1">
-  
+      <label for="textInput">Código de acesso:</label>
+    <input type="text" id="codigodorespondente" class="form-control mb-3" placeholder="" value=""><br>
+    
+    <label for="textInput">Seu nome:</label>
+    <input type="text" id="nomedorespondente" class="form-control mb-3" placeholder="" value=""><br>
+    
+    <label for="textInput">Seu líder:</label>
+    <input type="text" id="liderdorespondente" class="form-control mb-3" placeholder="" value="">
+
   </ul>
      </div> <!-- Fim_do_Card_Body --> 
   
@@ -64,30 +68,11 @@
       <p class="h6 mb-4 text-left text-dark">Código de acesso:</p>
     <input type="range" class="custom-range" id="customRange1">
   
-      </div> <!-- Fim_do_Card_Body -->
-  
-  
-    <label for="textInput">Código de acesso:</label>
-    <input type="text" id="codigodorespondente" class="form-control mb-3" placeholder="" value=""><br>
-    
-    <label for="textInput">Seu nome:</label>
-    <input type="text" id="nomedorespondente" class="form-control mb-3" placeholder="" value=""><br>
-    
-    <label for="textInput">Seu líder:</label>
-    <input type="text" id="liderdorespondente" class="form-control mb-3" placeholder="" value="">
-  
-    <!--Fim da Identificação-->
-    
+      </div> <!-- Fim_do_Card_Body -->    
   
   </li>
   
-  
-  
-  
-  
-  
-  
-<label for="customRange1">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label><input type="range" class="custom-range" id="customRange1"></li>
+  </div> <!-- Fim_do_Card-->   
   
       
  <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark font-weight-bold"> 
@@ -96,7 +81,7 @@
     
     
     </div> <!-- Fim_do_Card_Body -->
-</div> <!-- Fim_do_Card-->   
+
       
 </div> <!-- Fim_do_Container_Principal-->
   
@@ -258,7 +243,7 @@
           listadeadms_temp = new Array();
           sessionStorage.setItem("BANCO_ADMS", JSON.stringify(listadeadms_temp));}     
           listadeadms = listadeadms_temp;
-        alert ("gtgtgtgt.")}
+        alert ("vvv.")}
   window.onload = Pegarlistadeadms();
   </script>
 </body>
